@@ -32,6 +32,17 @@ const GlobalStyle = createGlobalStyle`
       display: inline-block;
     }
 
+    input, textarea {
+      border: 1px solid #30363d;
+      color: #c9d1d9;
+      font-size: .875rem;
+      padding: 5px 12px;
+      border-radius: 6px;
+      box-shadow: 0px 0px transparent;
+      background: #0d1017;
+      font-family: 'Roboto', sans-serif;
+    }
+
     button {
       cursor: pointer;
       border: none;
