@@ -18,6 +18,10 @@ const GlobalStyle = createGlobalStyle`
     background: #0d1017;
     color: #ffffff;
 
+    @media (max-width: 768px) {
+      background: #161b21;
+    }
+
     a {
       text-decoration: none;
       color: #ffffff;
