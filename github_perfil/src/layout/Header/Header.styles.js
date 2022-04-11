@@ -11,6 +11,7 @@ export const HeaderContainer = styled.header`
   @media (max-width: 768px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
 
     a {
       display: inline-block;
@@ -29,7 +30,7 @@ export const HeaderContainer = styled.header`
 export const HeaderBtnOpen = styled.button`
   display: none;
   background: transparent;
-  padding: 5px;
+  padding: 5px 0;
 
   @media (max-width: 768px) {
     display: inline-block;
