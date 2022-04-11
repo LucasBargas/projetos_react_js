@@ -84,6 +84,7 @@ export const Nav = styled.nav`
           height: 20px;
           border-radius: 50%;
           margin-right: 5px;
+          object-fit: cover;
         }
 
         svg {
