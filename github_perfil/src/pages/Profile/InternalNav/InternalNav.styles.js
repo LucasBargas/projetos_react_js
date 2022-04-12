@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const InternalNavContainer = styled.section`
-  padding-top: 1.5rem;
+  padding-top: 2rem;
   border-bottom: 1px solid #30363d;
   display: flex;
   justify-content: flex-end;
@@ -18,7 +18,7 @@ export const InternalNavContainer = styled.section`
         align-items: center;
         padding: 8px 16px 16px 16px;
         border-bottom: 2px solid transparent;
-        color: #bbbbbb;
+        color: #c9d1d9;
 
         &:hover {
           border-bottom-color: #6e7681;
@@ -29,6 +29,7 @@ export const InternalNavContainer = styled.section`
           top: 2px;
           margin-right: 6px;
           font-size: 1rem;
+          color: #c9d1d9;
         }
 
         &.active {

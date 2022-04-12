@@ -6,6 +6,7 @@ import { FiMapPin } from 'react-icons/fi';
 import { BiLink } from 'react-icons/bi';
 import { BsTwitter } from 'react-icons/bs';
 import { RiBuildingLine } from 'react-icons/ri';
+import { IoPeopleOutline } from 'react-icons/io5';
 
 const ProfileDatas = () => {
   const [datasUser, setDatasUser] = useState(true);
@@ -59,12 +60,18 @@ const ProfileDatas = () => {
         <Link to='/'>
           <img src={userPhoto} alt="" />
         </Link>
+      </S.UserPhoto>
 
         {datasUser && <S.Datas>
           {name && <h2>{name}</h2>}
           {username && <h3>{username}</h3>}
           {bio && <p>{bio}</p>}
           <button onClick={handleUpdateUser}>Edit Profile</button>
+          <S.Follows>
+            <a href="#follower"><IoPeopleOutline /> <strong>1</strong> follower</a>
+            <span> - </span>
+            <a href="#following"><strong>7</strong> following</a>
+          </S.Follows>
           <ul>
             {company && <li><RiBuildingLine /> {company}</li>}
             {location && <li><FiMapPin /> {location}</li>}
@@ -84,13 +91,24 @@ const ProfileDatas = () => {
           <textarea id='bio' placeholder='Add a bio' value={bio} onChange={({ target }) => setBio(target.value)} />
           <p>You can <strong>@mention</strong> other users and organizations to link to them.</p>
 
-          <input type="text" placeholder='Company' value={company} onChange={({ target }) => setCompany(target.value)} />
-          <input type="text" placeholder='Location' value={location} onChange={({ target }) => setLocation(target.value)} />
-          <input type="text" placeholder='Website' value={website} onChange={({ target }) => setWebsite(target.value)} />
-          <input type="text" placeholder='Twitter username' value={twitter} onChange={({ target }) => setTwitter(target.value)} />
+          <div>
+            <span><RiBuildingLine /></span>
+            <input type="text" placeholder='Company' value={company} onChange={({ target }) => setCompany(target.value)} />
+          </div>
+          <div>
+            <span><FiMapPin /></span>
+            <input type="text" placeholder='Location' value={location} onChange={({ target }) => setLocation(target.value)} />
+          </div>
+          <div>
+            <span><BiLink /></span>
+            <input type="text" placeholder='Website' value={website} onChange={({ target }) => setWebsite(target.value)} />
+          </div>
+          <div>
+            <span><BsTwitter /></span>
+            <input type="text" placeholder='Twitter username' value={twitter} onChange={({ target }) => setTwitter(target.value)} />
+          </div>
           <button>Save</button>
         </S.UpdateDatas> }
-      </S.UserPhoto>
     </S.ProfileDatasArea>
   )
 }
