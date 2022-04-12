@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const InternalNavContainer = styled.section`
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   border-bottom: 1px solid #30363d;
   display: flex;
   justify-content: flex-end;
