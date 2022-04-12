@@ -35,7 +35,7 @@ export const HeaderIcons = styled.nav`
         }
 
         span {
-          border-bottom: 5px solid #cccccc;
+          border-bottom: 4px solid #cccccc;
         }
       }
 
