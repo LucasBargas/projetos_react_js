@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ProfileContentContainer = styled.section`
-  padding-top: 1rem;
+  padding: 1.25rem 0 3.25rem 0;
 `;
 
 export const ProfileContentArea = styled.div`
