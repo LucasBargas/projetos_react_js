@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
 export const ProfileDatasArea = styled.div`
-  position: relative;
-  top: -3.5rem;
-  width: 25%;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
 
   input:focus, textarea:focus {
     border-color: #1158c7;
@@ -48,7 +47,6 @@ export const Datas = styled.div`
     margin-top: 1rem;
     display: block;
     width: 100%;
-    max-width: 296px;
     padding: 7px 1rem;
     font-size: .875rem;
     font-weight: 500;

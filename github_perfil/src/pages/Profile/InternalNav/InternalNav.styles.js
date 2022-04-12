@@ -1,14 +1,11 @@
 import styled from 'styled-components';
 
 export const InternalNavContainer = styled.section`
-  padding-top: 2rem;
   border-bottom: 1px solid #30363d;
-  display: flex;
-  justify-content: flex-end;
+  grid-column: 1 / 5;
 
   nav {
     font-size: .875rem;
-    width: 70%;
 
     ul {
       display: flex;

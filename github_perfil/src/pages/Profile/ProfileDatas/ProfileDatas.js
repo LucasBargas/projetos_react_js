@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import * as S from './ProfileDatas.styles';
-import userPhoto from '../../../../assets/images/user-photo.png';
+import userPhoto from '../../../assets/images/user-photo.png';
 import { Link } from 'react-router-dom';
 import { FiMapPin } from 'react-icons/fi';
 import { BiLink } from 'react-icons/bi';

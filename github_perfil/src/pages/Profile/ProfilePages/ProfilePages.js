@@ -1,11 +1,11 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import * as S from './ProfilePages.styles';
-import Overview from '../../../Overview/Overview';
-import Repositories from '../../../Repositories/Repositories';
-import Projects from '../../../Projects/Projects';
-import Packages from '../../../Packages/Packages';
-import Stars from '../../../Stars/Stars';
+import Overview from '../../Overview/Overview';
+import Repositories from '../../Repositories/Repositories';
+import Projects from '../../Projects/Projects';
+import Packages from '../../Packages/Packages';
+import Stars from '../../Stars/Stars';
 
 const ProfilePages = () => {
   return (
