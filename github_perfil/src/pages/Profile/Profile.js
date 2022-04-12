@@ -1,8 +1,10 @@
-import React from 'react';
+import InternalNav from "./InternalNav/InternalNav";
 
 const Profile = () => {
   return (
-    <div>Profile</div>
+    <main>
+      <InternalNav />
+    </main>
   )
 }
 
