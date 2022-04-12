@@ -1,9 +1,14 @@
-import React from 'react'
+import Head from '../../utils/Head';
 
 const Repositories = () => {
   return (
-    <div>Repositories</div>
+    <>
+      <Head title='Your Repositories' />
+      <div>
+        Repositories
+      </div>
+    </>
   )
 }
 
-export default Repositories
+export default Repositories;

@@ -1,9 +1,14 @@
-import React from 'react'
+import Head from '../../utils/Head';
 
 const Projects = () => {
   return (
-    <div>Projects</div>
+    <>
+      <Head title='Your Projects' />
+      <div>
+        Projects
+      </div>
+    </>
   )
 }
 
-export default Projects
+export default Projects;

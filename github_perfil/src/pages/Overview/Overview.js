@@ -1,8 +1,11 @@
-import React from 'react';
+import Head from '../../utils/Head';
 
 const Overview = () => {
   return (
-    <div>Overview</div>
+    <>
+      <Head title='LucasBargas (Lucas Bargas)' />
+      <div>Overview</div>
+    </>
   )
 }
 

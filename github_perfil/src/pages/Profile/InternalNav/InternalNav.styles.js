@@ -8,7 +8,7 @@ export const InternalNavContainer = styled.section`
 
   nav {
     font-size: .875rem;
-    width: 65%;
+    width: 70%;
 
     ul {
       display: flex;

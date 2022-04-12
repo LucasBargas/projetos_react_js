@@ -74,13 +74,13 @@ const ProfileDatas = () => {
         </S.Datas>}
 
         {updateForm && <S.UpdateDatas onSubmit={handleSubmitUpdate}>
-          <label for='name'>Name</label>
+          <label htmlFor='name'>Name</label>
           <input type="text" id='name' placeholder='Name' value={name} onChange={({ target }) => setName(target.value)} />
 
-          <label for='userName'>Username</label>
+          <label htmlFor='userName'>Username</label>
           <input type="text" id='userName' placeholder='Username' value={username} onChange={({ target }) => setUsername(target.value)} />
 
-          <label for='bio'>Bio</label>
+          <label htmlFor='bio'>Bio</label>
           <textarea id='bio' placeholder='Add a bio' value={bio} onChange={({ target }) => setBio(target.value)} />
           <p>You can <strong>@mention</strong> other users and organizations to link to them.</p>
 

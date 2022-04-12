@@ -1,9 +1,14 @@
-import React from 'react'
+import Head from '../../utils/Head';
 
 const Stars = () => {
   return (
-    <div>Stars</div>
+    <>
+      <Head title='Your Stars' />
+      <div>
+        Stars
+      </div>
+    </>
   )
 }
 
-export default Stars
+export default Stars;

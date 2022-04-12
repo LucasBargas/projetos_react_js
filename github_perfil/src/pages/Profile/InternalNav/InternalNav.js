@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, Routes, Route } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import * as S from './InternalNav.styles';
 import { FiBookOpen } from 'react-icons/fi';
 import { HiOutlineDesktopComputer } from 'react-icons/hi';

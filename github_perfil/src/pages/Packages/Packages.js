@@ -1,8 +1,13 @@
-import React from 'react';
+import Head from '../../utils/Head';
 
 const Packages = () => {
   return (
-    <div>Packages</div>
+    <>
+      <Head title='Your Packages' />
+      <div>
+        Packages
+      </div>
+    </>
   )
 }
 
