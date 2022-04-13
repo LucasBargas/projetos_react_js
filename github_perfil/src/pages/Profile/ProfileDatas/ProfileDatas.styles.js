@@ -19,16 +19,12 @@ export const UserPhoto = styled.div`
     border-radius: 50%;
     object-fit: cover;
   }
-`;
-
-export const Datas = styled.div`
-  h2, p, a, li, button, span, strong, svg {
-    color: #C9D1D9;
-  }
 
   h2 {
+    margin-top: 1rem;
     font-size: 1.5rem;
     font-weight: 500;
+    color: #C9D1D9;
   }
 
   h3 {
@@ -37,10 +33,15 @@ export const Datas = styled.div`
     color: #8b949e;
     line-height: 1.5rem;
   }
+`;
+
+export const Datas = styled.div`
+  p, a, li, button, span, strong, svg {
+    color: #C9D1D9;
+  }
 
   p {
     font-size: 1rem;
-    margin-top: 1.15rem;
   }
 
   button {

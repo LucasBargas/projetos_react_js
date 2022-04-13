@@ -60,11 +60,17 @@ const ProfileDatas = () => {
         <Link to='/'>
           <img src={userPhoto} alt="" />
         </Link>
+        <div>
+          {datasUser && (
+            <>
+              {name && <h2>{name}</h2>}
+              {username && <h3>{username}</h3>}
+            </>
+          )}
+        </div>
       </S.UserPhoto>
 
         {datasUser && <S.Datas>
-          {name && <h2>{name}</h2>}
-          {username && <h3>{username}</h3>}
           {bio && <p>{bio}</p>}
           <button onClick={handleUpdateUser}>Edit Profile</button>
           <S.Follows>
