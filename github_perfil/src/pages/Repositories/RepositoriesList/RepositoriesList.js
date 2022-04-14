@@ -51,7 +51,7 @@ const RepositoriesList = ({ valueToFilter, setValueToFilter, inputFilter }) => {
                     {repoMap.license}
                   </S.TagLicense>
                 </>
-                <button onClick={deleteRepo}>Apagar repositório</button>
+                <button onClick={deleteRepo}>Delete repository</button>
               </S.RepoTags>
             </li>
           ))
