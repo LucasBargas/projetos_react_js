@@ -67,18 +67,18 @@ const NewRepositorie = ({ setNewRepo }) => {
             <textarea ref={inputRepoDescription} id='desc' type="text" placeholder='Set the Description...' />
 
             <S.SelectArea>
-              <select ref={selectType}>
+              <select ref={selectType} value={type}>
                 <option disabled selected value="">Select the Type</option>
                 <option value="Public">Public</option>
                 <option value="Private">Private</option>
               </select>
 
-              <select ref={selectLicense}>
+              <select ref={selectLicense} value={license}>
                 <option disabled selected value="">Select the License</option>
                 <option value="MIT license">MIT license</option>
               </select>
 
-              <select ref={selectLanguage}>
+              <select ref={selectLanguage} value={lang}>
                 <option disabled selected value="">Select the Language</option>
                 <option value="JavaScript">JavaScript</option>
                 <option value="HTML">HTML</option>
