@@ -3,6 +3,13 @@ import styled from 'styled-components';
 export const ProfileDatasArea = styled.div`
   grid-column: 1 / 2;
   grid-row: 2 / 3;
+  position: relative;
+  top: -4rem;
+
+  @media (max-width: 480px) {
+    position: static;
+    order: 1;
+  } 
 
   input:focus, textarea:focus {
     border-color: #1158c7;
@@ -18,6 +25,11 @@ export const UserPhoto = styled.div`
     height: 296px;
     border-radius: 50%;
     object-fit: cover;
+
+    @media (max-width: 820px) {
+      width: 250px;
+      height: 250px;
+    }
   }
 
   h2 {

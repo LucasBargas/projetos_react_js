@@ -15,6 +15,10 @@ export const PinnedRepos = styled.div`
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   padding-top: .5rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const PinnedRepoCard = styled.div`
