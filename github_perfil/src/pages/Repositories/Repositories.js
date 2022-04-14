@@ -7,7 +7,6 @@ import RepositoriesList from './RepositoriesList/RepositoriesList';
 import NewRepositorie from './NewRepositorie/NewRepositorie';
 
 const Repositories = () => {
-  const [inputFilter, setInputFilter] = useState('');
   const [valueToFilter, setValueToFilter] = useState('All');
   const [typeButton, setTypeButton] = useState(false);
   const [languageButton, setLanguageButton] = useState(false);
@@ -47,7 +46,7 @@ const Repositories = () => {
       <Head title='Your Repositories' />
       <S.RepoContainer>
         <S.SearchArea>
-          <input type="text" placeholder='Find a repository...' value={inputFilter} onChange = { ({ target }) => setInputFilter(target.value)} />
+          <input type="text" placeholder='Find a repository...' />
 
           <S.FilterButtons>
             <S.Button className='filterButton type'>
@@ -92,7 +91,7 @@ const Repositories = () => {
           </S.ButtonNewRepo>
         </S.SearchArea>
 
-        <RepositoriesList valueToFilter={valueToFilter} setValueToFilter={setValueToFilter} inputFilter={inputFilter} />
+        <RepositoriesList valueToFilter={valueToFilter} setValueToFilter={setValueToFilter} />
 
         {newRepo && <NewRepositorie setNewRepo={setNewRepo} />}
       </S.RepoContainer>

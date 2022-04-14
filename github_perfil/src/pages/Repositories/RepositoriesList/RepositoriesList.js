@@ -4,7 +4,7 @@ import repoList from './repoList';
 import { IoCloseSharp } from 'react-icons/io5';
 import { GoLaw } from 'react-icons/go';
 
-const RepositoriesList = ({ valueToFilter, setValueToFilter }) => {
+const RepositoriesList = ({ valueToFilter, setValueToFilter, inputFilter }) => {
   const [resultLength, setResultLength] = useState(null);
 
   const repoListFilter = repoList.filter(repoFilter => 
@@ -14,10 +14,6 @@ const RepositoriesList = ({ valueToFilter, setValueToFilter }) => {
   useEffect(() => {
     setResultLength(repoListFilter.length);
   }, [repoListFilter.length]);
-
-  // const inputFilter = repoList.filter(repo => {
-  //   return repo.type === inputFilter;
-  // })
 
   return (
     <S.RepoListArea>
