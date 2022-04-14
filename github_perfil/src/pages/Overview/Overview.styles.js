@@ -6,6 +6,10 @@ export const OverviewContainer = styled.section`
   padding: 1.5rem;
   color: #c9d1d9;
 
+  @media(max-width: 360px) {
+    padding: 1rem;
+  }
+
   h2 {
     font-size: 1.0625rem;
     font-weight: 400;
@@ -39,6 +43,10 @@ export const MainTitle = styled.div`
   h1 {
     font-weight: 400;
     font-size: 1.3125rem;
+
+    @media(max-width: 320px) {
+      font-size: 1.25rem;
+    }
   }
 `;
 
@@ -49,6 +57,7 @@ export const AboutUser = styled.div`
 export const UserStacks = styled.div`
   padding-top: 1rem;
   display: flex;
+  flex-wrap: wrap;
   gap: .75rem;
 
   img {
@@ -63,6 +72,7 @@ export const ContactsUser = styled.div`
 export const ContactsRow = styled.div`
   padding-top: 1rem;
   display: flex;
+  flex-wrap: wrap;
   gap: .35rem;
 `;
 

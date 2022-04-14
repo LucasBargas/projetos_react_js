@@ -15,6 +15,10 @@ const RepositoriesList = ({ valueToFilter, setValueToFilter, inputFilter }) => {
     setResultLength(repoListFilter.length);
   }, [repoListFilter.length]);
 
+  const deleteRepo = ({ target }) => {
+    if (window.confirm('Are you sure about that?')) target.closest('li').remove();
+  }
+
   return (
     <S.RepoListArea>
       <ul>
@@ -37,14 +41,17 @@ const RepositoriesList = ({ valueToFilter, setValueToFilter, inputFilter }) => {
               </S.RepoTitle>
               <p>{repoMap.repoDescription}</p>
               <S.RepoTags>
-                <S.TagLang>
-                  <span className={repoMap.lang.toLowerCase()}></span>
-                  {repoMap.lang}
-                </S.TagLang>
-                <S.TagLicense>
-                  {repoMap.license && <GoLaw />}
-                  {repoMap.license}
-                </S.TagLicense>
+                <>
+                  <S.TagLang>
+                    <span className={repoMap.lang.toLowerCase()}></span>
+                    {repoMap.lang}
+                  </S.TagLang>
+                  <S.TagLicense>
+                    {repoMap.license && <GoLaw />}
+                    {repoMap.license}
+                  </S.TagLicense>
+                </>
+                <button onClick={deleteRepo}>Apagar repositório</button>
               </S.RepoTags>
             </li>
           ))

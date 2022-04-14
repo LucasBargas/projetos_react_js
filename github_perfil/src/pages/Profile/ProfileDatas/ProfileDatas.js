@@ -70,51 +70,51 @@ const ProfileDatas = () => {
         </div>
       </S.UserPhoto>
 
-        {datasUser && <S.Datas>
-          {bio && <p>{bio}</p>}
-          <button onClick={handleUpdateUser}>Edit Profile</button>
-          <S.Follows>
-            <a href="#follower"><IoPeopleOutline /> <strong>1</strong> follower</a>
-            <span> - </span>
-            <a href="#following"><strong>7</strong> following</a>
-          </S.Follows>
-          <ul>
-            {company && <li><RiBuildingLine /> {company}</li>}
-            {location && <li><FiMapPin /> {location}</li>}
-            {website && <li><a href={website}target="_blank" rel="noopener noreferrer"><BiLink /> {website}</a></li>}
-            {twitter && <li><a href={twitter}target="_blank" rel="noopener noreferrer"><BsTwitter />  @{twitter}</a></li>}
-          </ul>
-        </S.Datas>}
+      {datasUser && <S.Datas>
+        {bio && <p>{bio}</p>}
+        <button onClick={handleUpdateUser}>Edit Profile</button>
+        <S.Follows>
+          <a href="#follower"><IoPeopleOutline /> <strong>1</strong> follower</a>
+          <span> - </span>
+          <a href="#following"><strong>7</strong> following</a>
+        </S.Follows>
+        <ul>
+          {company && <li><RiBuildingLine /> {company}</li>}
+          {location && <li><FiMapPin /> {location}</li>}
+          {website && <li><a href={website}target="_blank" rel="noopener noreferrer"><BiLink /> {website}</a></li>}
+          {twitter && <li><a href={twitter}target="_blank" rel="noopener noreferrer"><BsTwitter />  @{twitter}</a></li>}
+        </ul>
+      </S.Datas>}
 
-        {updateForm && <S.UpdateDatas onSubmit={handleSubmitUpdate}>
-          <label htmlFor='name'>Name</label>
-          <input type="text" id='name' placeholder='Name' value={name} onChange={({ target }) => setName(target.value)} />
+      {updateForm && <S.UpdateDatas onSubmit={handleSubmitUpdate}>
+        <label htmlFor='name'>Name</label>
+        <input type="text" id='name' placeholder='Name' value={name} onChange={({ target }) => setName(target.value)} />
 
-          <label htmlFor='userName'>Username</label>
-          <input type="text" id='userName' placeholder='Username' value={username} onChange={({ target }) => setUsername(target.value)} />
+        <label htmlFor='userName'>Username</label>
+        <input type="text" id='userName' placeholder='Username' value={username} onChange={({ target }) => setUsername(target.value)} />
 
-          <label htmlFor='bio'>Bio</label>
-          <textarea id='bio' placeholder='Add a bio' value={bio} onChange={({ target }) => setBio(target.value)} />
-          <p>You can <strong>@mention</strong> other users and organizations to link to them.</p>
+        <label htmlFor='bio'>Bio</label>
+        <textarea id='bio' placeholder='Add a bio' value={bio} onChange={({ target }) => setBio(target.value)} />
+        <p>You can <strong>@mention</strong> other users and organizations to link to them.</p>
 
-          <div>
-            <span><RiBuildingLine /></span>
-            <input type="text" placeholder='Company' value={company} onChange={({ target }) => setCompany(target.value)} />
-          </div>
-          <div>
-            <span><FiMapPin /></span>
-            <input type="text" placeholder='Location' value={location} onChange={({ target }) => setLocation(target.value)} />
-          </div>
-          <div>
-            <span><BiLink /></span>
-            <input type="text" placeholder='Website' value={website} onChange={({ target }) => setWebsite(target.value)} />
-          </div>
-          <div>
-            <span><BsTwitter /></span>
-            <input type="text" placeholder='Twitter username' value={twitter} onChange={({ target }) => setTwitter(target.value)} />
-          </div>
-          <button>Save</button>
-        </S.UpdateDatas> }
+        <div>
+          <span><RiBuildingLine /></span>
+          <input type="text" placeholder='Company' value={company} onChange={({ target }) => setCompany(target.value)} />
+        </div>
+        <div>
+          <span><FiMapPin /></span>
+          <input type="text" placeholder='Location' value={location} onChange={({ target }) => setLocation(target.value)} />
+        </div>
+        <div>
+          <span><BiLink /></span>
+          <input type="text" placeholder='Website' value={website} onChange={({ target }) => setWebsite(target.value)} />
+        </div>
+        <div>
+          <span><BsTwitter /></span>
+          <input type="text" placeholder='Twitter username' value={twitter} onChange={({ target }) => setTwitter(target.value)} />
+        </div>
+        <button>Save</button>
+      </S.UpdateDatas> }
     </S.ProfileDatasArea>
   )
 }

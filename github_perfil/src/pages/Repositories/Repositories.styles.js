@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
+import { animationModal } from './NewRepositorie/NewRepositorie.styles';
 
 export const RepoContainer = styled.section`
   color: #c9d1d9;
@@ -11,10 +12,26 @@ export const SearchArea = styled.div`
   border-bottom: 1px solid #21262d;
   padding-bottom: 1rem;
 
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+  }
+
   input {
     width: 100%;
     padding: 5px 12px;
     color: #c9d1d9;
+
+    @media (max-width: 480px) {
+      order: 2;
+      margin-top: 1rem;
+    }
+
+    &:focus {
+      border-color: #1158c7;
+      box-shadow: 0px 0px 6px 0px #1158c7;
+    }
 
     &::placeholder {
       color: #c9d1d9;
@@ -25,6 +42,10 @@ export const SearchArea = styled.div`
 `;
 
 export const FilterButtons = styled.div`
+  @media (max-width: 480px) {
+    order: 3;
+  }
+
   display: flex;
   gap: .25rem;
 `;
@@ -63,6 +84,11 @@ export const Button = styled.div`
 `;
 
 export const ButtonNewRepo = styled.div`
+  @media (max-width: 480px) {
+    order: 1;
+    width: 100%;
+  }
+
   button {
     display: flex;
     align-items: center;
@@ -75,6 +101,11 @@ export const ButtonNewRepo = styled.div`
     border: 1px solid rgba(240,246,252,0.1);
     border-radius: 6px;
 
+    @media (max-width: 480px) {
+      width: 100%;
+      justify-content: center;
+    }
+
     svg {
       margin-right: 5px;
     }
@@ -86,6 +117,20 @@ export const ButtonSubmenuContainer = styled.div`
   right: 0;
   width: 20vw;
   display: ${({ show }) => show ? 'block' : 'none'};
+
+  @media (max-width: 480px) {
+    background: rgba(13,16,23,.9);
+    display: ${({ show }) => show ? 'flex' : 'none'};
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    width: 100%;
+    height: 100vh;
+    padding: 1.5rem;
+  }
 `;
 
 export const ButtonSubmenu = styled.nav`
@@ -96,9 +141,18 @@ export const ButtonSubmenu = styled.nav`
   border-radius: 6px;
   font-size: .75rem;
 
+  @media (max-width: 480px) {
+    width: 100%;
+    animation: ${animationModal} .4s forwards;
+  }
+
   li {
-    padding: 7px 7px 7px 16px;
+    padding: 7px 7px 7px 1rem;
     cursor: pointer;
+
+    @media (max-width: 480px) {
+      padding: 1rem 7px 1rem 1rem;
+    }
 
     &:not(:last-of-type) {
       border-bottom: 1px solid #21262d;
@@ -117,6 +171,10 @@ export const CloseButtonSubmenu = styled.div`
     background: transparent;
     color: #8b949e;
     font-size: 1rem;
+
+    @media (max-width: 480px) {
+      font-size: 1.25rem;
+    }
 
     &:hover {
       color: #c9d1d9;

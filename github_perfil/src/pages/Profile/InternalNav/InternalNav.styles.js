@@ -11,6 +11,7 @@ export const InternalNavContainer = styled.section`
   }
 
   @media (max-width: 480px) {
+    padding-top: 1rem;
     order: 2;
   }
 
@@ -47,6 +48,10 @@ export const InternalNavContainer = styled.section`
           margin-right: 6px;
           font-size: 1rem;
           color: #c9d1d9;
+
+          @media (max-width: 480px) {
+            display: none;
+          }
         }
 
         &.active {

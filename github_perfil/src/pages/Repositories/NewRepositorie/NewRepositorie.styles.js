@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
-const animationModal = keyframes`
+export const animationModal = keyframes`
   from {
     opacity: 0;
     transform: translate3d(0, -50px, 0);
@@ -22,6 +22,10 @@ export const NewRepoContainer = styled.div`
   width: 100%;
   height: 100vh;
   background: rgba(13, 16, 23, .9);
+
+  @media (max-width: 480px) {
+    padding: 0 1.5rem;
+  }
 `;
 
 export const CloseModal = styled.div`
@@ -43,13 +47,21 @@ export const CloseModal = styled.div`
 export const NewRepoModal = styled.div`
   border: 1px solid rgba(240,246,252,0.1);
   background: #21262d;
-  width: 50%;
+  width: 40%;
   border-radius: 6px;
   animation: ${animationModal} .5s forwards;
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 `;
 
 export const NewRepoContent = styled.div`
   padding: .2rem 1.5rem 1.5rem 1.5rem;
+
+  @media (max-width: 360px) {
+    padding: .2rem 1rem 1.5rem 1rem;
+  }
 
   h2 {
     text-align: center;
@@ -59,7 +71,8 @@ export const NewRepoContent = styled.div`
 
 export const FormRepo = styled.form`
   padding-top: 1.15rem;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: .5rem;
 
   #nome {
@@ -74,9 +87,21 @@ export const FormRepo = styled.form`
 `;
 
 export const SelectArea = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: .5rem;
+
+  @media (max-width: 414px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  select {
+    width: calc(100% / 3);
+
+    @media (max-width: 414px) {
+      width: 80%;
+    }
+  }
 `;
 
 export const ModalReposButtons = styled.div`

@@ -13,6 +13,14 @@ export const RepoListArea = styled.div`
         margin: .5rem 0 1rem 0;
         width: 55%;
         line-height: 1.5;
+
+        @media(max-width: 375px) {
+          width: 65%;
+        }
+
+        @media(max-width: 276px) {
+          width: 75%;
+        }
       }
     }
   }
@@ -69,6 +77,10 @@ export const RepoTitle = styled.div`
     font-size: 1.25rem;
     font-weight: 500;
 
+    @media(max-width: 276px) {
+      font-size: 1rem;
+    }
+
     &:hover {
       text-decoration: underline;
     }
@@ -89,8 +101,21 @@ export const RepoTitle = styled.div`
 
 export const RepoTags = styled.div`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 1.5rem;
+
+  button {
+    padding: 3px 12px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #ffffff;
+    box-shadow: 0px 0px transparent, 0px 0px transparent;
+    border: 1px solid rgba(240,246,252,0.1);
+    border-radius: 6px;
+    background: #21262d;
+    color: #C9D1D9;
+  }
 `;
 
 export const TagLang = styled.div`

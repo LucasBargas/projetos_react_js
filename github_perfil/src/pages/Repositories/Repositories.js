@@ -41,6 +41,10 @@ const Repositories = () => {
     document.addEventListener('click', handleDocClick);
   }, []);
 
+  const handleOutsideClick = ({ target, currentTarget }) => {
+    if (target === currentTarget) closeSubMenu();
+  }
+
   return (
     <>
       <Head title='Your Repositories' />
@@ -51,7 +55,7 @@ const Repositories = () => {
           <S.FilterButtons>
             <S.Button className='filterButton type'>
               <span onClick={handleOpenSubmenu}>Type</span>
-              <S.ButtonSubmenuContainer show={typeButton}>
+              <S.ButtonSubmenuContainer show={typeButton} onClick={handleOutsideClick}>
                 <S.ButtonSubmenu>
                   <S.CloseButtonSubmenu>
                     <p>Select type</p>
@@ -68,7 +72,7 @@ const Repositories = () => {
 
             <S.Button className='filterButton language'>
               <span onClick={handleOpenSubmenu}>Language</span>
-              <S.ButtonSubmenuContainer show={languageButton}>
+              <S.ButtonSubmenuContainer show={languageButton} onClick={handleOutsideClick}>
                 <S.ButtonSubmenu>
                   <S.CloseButtonSubmenu>
                     <p>Select language</p>

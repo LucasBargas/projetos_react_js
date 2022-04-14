@@ -50,6 +50,7 @@ const GlobalStyle = createGlobalStyle`
     button {
       cursor: pointer;
       border: none;
+      font-family: 'Roboto', sans-serif;
     }
   }
 `;

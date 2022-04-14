@@ -20,6 +20,11 @@ export const ProfileDatasArea = styled.div`
 export const UserPhoto = styled.div`
   padding-bottom: .875rem;
 
+  @media (max-width: 480px) {
+    display: flex;
+    align-items: center;
+  }
+
   img {
     width: 296px;
     height: 296px;
@@ -30,6 +35,15 @@ export const UserPhoto = styled.div`
       width: 250px;
       height: 250px;
     }
+
+    @media (max-width: 480px) {
+      width: 74px;
+      height: 74px;
+    }
+  }
+
+  div {
+    padding-left: 1rem;
   }
 
   h2 {
@@ -37,6 +51,11 @@ export const UserPhoto = styled.div`
     font-size: 1.5rem;
     font-weight: 500;
     color: #C9D1D9;
+
+    @media (max-width: 480px) {
+      margin-top: 0;
+      font-weight: 600;
+    }
   }
 
   h3 {
