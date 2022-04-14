@@ -31,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
       list-style: none;
     }
 
-    button, input, textarea {
+    button, input, textarea, select {
       outline: none;
       display: inline-block;
     }

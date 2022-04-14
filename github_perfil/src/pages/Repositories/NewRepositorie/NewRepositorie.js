@@ -6,24 +6,25 @@ import repoList from '../RepositoriesList/repoList';
 // console.log(repoList);
 
 const NewRepositorie = ({ setNewRepo }) => {
-  const inputType = useRef();
   const inputRepoTitle = useRef();
   const inputRepoDescription = useRef();
-  const inputLicense = useRef();
-  const inputLang = useRef();
+  const selectType = useRef();
+  const selectLicense = useRef();
+  const selectLanguage = useRef();
 
-  const [type, setType] = useState(undefined);
   const [repoTitle, setRepoTitle] = useState(undefined);
   const [repoDescription, setRepoDescription] = useState(undefined);
+  const [type, setType] = useState(undefined);
   const [license, setLicense] = useState(undefined);
   const [lang, setLang] = useState(undefined);
 
   const setDatas = () => {
-    setType(inputType.current.value);
+    setType(selectType.current.value);
+    // console.log(selectType.current.value)
     setRepoTitle(inputRepoTitle.current.value);
     setRepoDescription(inputRepoDescription.current.value);
-    setLicense(inputLicense.current.value);
-    setLang(inputLang.current.value);
+    setLicense(selectLicense.current.value);
+    setLang(selectLanguage.current.value);
   }
 
   useEffect(() => {
@@ -37,7 +38,7 @@ const NewRepositorie = ({ setNewRepo }) => {
       lang: lang ? lang : undefined,
     }
       // console.log(newRepoDatas)
-      repoList.push(newRepoDatas);
+      repoList.unshift(newRepoDatas);
   }, [type, repoTitle, repoDescription, license, lang]);
 
   const handleNewRepoModal = ({ target, currentTarget }) => {
@@ -64,18 +65,35 @@ const NewRepositorie = ({ setNewRepo }) => {
           <h2>Create a new repository</h2>
 
           <S.FormRepo onClick={(e) => e.preventDefault()}>
-            <input ref={inputType} id='type' type="text" placeholder='Set the Type...' />
-            
             <input ref={inputRepoTitle} id='title' type="text" placeholder='Set the Title...' />
 
             <textarea ref={inputRepoDescription} id='desc' type="text" placeholder='Set the Description...' />
 
-            <input ref={inputLicense} id='license' type="text" placeholder='Set the License' />
+            <S.SelectArea>
+              <select ref={selectType}>
+                <option disabled selected value="">Select the Type</option>
+                <option value="Public">Public</option>
+                <option value="Private">Private</option>
+              </select>
 
-            <input ref={inputLang} id='lang' type="text" placeholder='Set the Language' />
+              <select ref={selectLicense}>
+                <option disabled selected value="">Select the License</option>
+                <option value="MIT license">MIT license</option>
+              </select>
 
-            <button onClick={sendNewRepo}>Send</button>
-            <button onClick={() => setNewRepo(null)}>Cancel</button>
+              <select ref={selectLanguage}>
+                <option disabled selected value="">Select the Language</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="Sass">Sass</option>
+              </select>
+            </S.SelectArea>
+
+            <S.ModalReposButtons>
+              <button id='send' onClick={sendNewRepo}>Send</button>
+              <button id='cancel' onClick={() => setNewRepo(null)}>Cancel</button>
+            </S.ModalReposButtons>
           </S.FormRepo>
         </S.NewRepoContent>
       </S.NewRepoModal>
