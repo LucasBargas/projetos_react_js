@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import * as S from './RepositoriesList.styles';
 import { IoCloseSharp } from 'react-icons/io5';
+import { GoLaw } from 'react-icons/go';
 
 const repoList = [
   {
@@ -11,15 +12,16 @@ const repoList = [
     repoDescription: 'Projetos desenvolvidos apenas com a biblioteca ReactJS, a partir de layouts e aplicações disponíveis na web.',
     license: 'MIT license',
     lang: 'JavaScript',
+    class: 'javaScript',
   },
   {
     type: 'Private',
     typeDefault: 'All',
     langDefault: 'All',
     repoTitle: 'projeto_private_exemplo2',
-    repoDescription: 'Os projetos contidos neste repositório foram desenvolvidos durante o curso de SASS e SCSS do professor Matheus Battisti na Udemy.',
-    license: 'MIT license',
+    repoDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sapien nibh, semper ac justo ut, eleifend aliquam.',
     lang: 'CSS',
+    class: 'css',
   },
   {
     type: 'Public',
@@ -29,6 +31,7 @@ const repoList = [
     repoDescription: 'Projetos desenvolvidos apenas com JavaScript Puro, a partir de layouts e aplicações disponíveis na web.',
     license: 'MIT license',
     lang: 'HTML',
+    class: 'html',
   },
   {
     type: 'Public',
@@ -38,6 +41,7 @@ const repoList = [
     repoDescription: 'Projetos desenvolvidos somente com HTML e o poderoso pré-processador SASS, a partir de layouts e aplicações disponíveis na web.',
     license: 'MIT license',
     lang: 'Sass',
+    class: 'sass',
   },
   {
     type: 'Public',
@@ -47,15 +51,16 @@ const repoList = [
     repoDescription: 'Projetos desenvolvidos apenas com HTML e CSS, a partir de layouts e aplicações disponíveis na web.',
     license: 'MIT license',
     lang: 'HTML',
+    class: 'html',
   },
   {
     type: 'Private',
     typeDefault: 'All',
     langDefault: 'All',
     repoTitle: 'projeto_private_exemplo1',
-    repoDescription: 'Os projetos contidos neste repositório foram desenvolvidos durante o curso de SASS e SCSS do professor Matheus Battisti na Udemy.',
-    license: 'MIT license',
+    repoDescription: 'Morbi at est nec enim scelerisque condimentum ut sit amet felis. Aliquam maximus leo at ex congue laoreet. Praesent hendrerit diam ut tellus pulvinar hendrerit.',
     lang: 'CSS',
+    class: 'css',
   },
   {
     type: 'Public',
@@ -65,6 +70,7 @@ const repoList = [
     repoDescription: 'Projetos desenvolvidos durante o curso de JavaScript da B7Web sob tutela do professor, Bonieky Lacerda.',
     license: 'MIT license',
     lang: 'JavaScript',
+    class: 'javaScript',
   },
   {
     type: 'Public',
@@ -74,15 +80,16 @@ const repoList = [
     repoDescription: 'Os projetos contidos neste repositório foram desenvolvidos durante o curso de SASS e SCSS do professor Matheus Battisti na Udemy.',
     license: 'MIT license',
     lang: 'HTML',
+    class: 'html',
   },
   {
     type: 'Private',
     typeDefault: 'All',
     langDefault: 'All',
     repoTitle: 'projeto_private_exemplo3',
-    repoDescription: 'Os projetos contidos neste repositório foram desenvolvidos durante o curso de SASS e SCSS do professor Matheus Battisti na Udemy.',
-    license: 'MIT license',
+    repoDescription: 'Nullam vel orci lacinia, pellentesque tortor ac, ullamcorper risus. Phasellus vitae lacus sit amet nulla finibus facilisis.',
     lang: 'JavaScript',
+    class: 'javaScript'
   },
 ];
 
@@ -118,6 +125,16 @@ const RepositoriesList = ({ valueToFilter, setValueToFilter }) => {
                 <span>{repoMap.type}</span>
               </S.RepoTitle>
               <p>{repoMap.repoDescription}</p>
+              <S.RepoTags>
+                <S.TagLang>
+                  <span className={repoMap.class}></span>
+                  {repoMap.lang}
+                </S.TagLang>
+                <S.TagLicense>
+                  {repoMap.license && <GoLaw />}
+                  {repoMap.license}
+                </S.TagLicense>
+              </S.RepoTags>
             </li>
           ))
         }

@@ -6,6 +6,14 @@ export const RepoListArea = styled.div`
       border-top: 1px solid #21262d;
       border-bottom: 1px solid #21262d;
       padding: 1.5rem 0;
+
+      p {
+        color: #8b949e;
+        font-size: .8125rem;
+        margin: .5rem 0 1rem 0;
+        width: 55%;
+        line-height: 1.5;
+      }
     }
   }
 `;
@@ -19,12 +27,6 @@ export const ClearFilterMessage = styled.li`
 
   strong {
     font-weight: 500;
-  }
-
-  p {
-    color: #8b949e;
-    font-size: .875rem;
-    width: 55%;
   }
 `;
 
@@ -82,5 +84,50 @@ export const RepoTitle = styled.div`
     color: #8b949e;
     padding: 0 7px;
     margin-left: .5rem;
+  }
+`;
+
+export const RepoTags = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+`;
+
+export const TagLang = styled.div`
+  display: flex;
+  align-items: center;
+  font-size: .75rem;
+  color: #8b949e;
+
+  span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.2);
+    margin-right: .2rem;
+
+    &.javaScript {
+      background: #f1e05a;
+    }
+
+    &.html {
+      background: #e34c26;
+    }
+
+    &.css {
+      background: #563d7c;
+    }
+
+    &.sass {
+      background: #a53b70;
+    }
+  }
+`
+
+export const TagLicense = styled(TagLang)`
+  svg {
+    font-size: 1rem;
+    margin-right: .2rem;
   }
 `;
