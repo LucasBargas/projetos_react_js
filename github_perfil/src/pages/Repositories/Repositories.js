@@ -4,11 +4,14 @@ import { HiOutlineDesktopComputer } from 'react-icons/hi';
 import { IoCloseSharp } from 'react-icons/io5';
 import { useEffect, useState } from 'react';
 import RepositoriesList from './RepositoriesList/RepositoriesList';
+import NewRepositorie from './NewRepositorie/NewRepositorie';
 
 const Repositories = () => {
+  const [inputFilter, setInputFilter] = useState('');
   const [valueToFilter, setValueToFilter] = useState('All');
   const [typeButton, setTypeButton] = useState(false);
   const [languageButton, setLanguageButton] = useState(false);
+  const [newRepo, setNewRepo] = useState(true);
 
   const handleValueToFilter = ({ target }) => {
     setValueToFilter((target.innerText));
@@ -44,7 +47,7 @@ const Repositories = () => {
       <Head title='Your Repositories' />
       <S.RepoContainer>
         <S.SearchArea>
-          <input type="text" placeholder='Find a repository...' />
+          <input type="text" placeholder='Find a repository...' value={inputFilter} onChange = { ({ target }) => setInputFilter(target.value)} />
 
           <S.FilterButtons>
             <S.Button className='filterButton type'>
@@ -85,11 +88,13 @@ const Repositories = () => {
           </S.FilterButtons>
 
           <S.ButtonNewRepo>
-            <button><HiOutlineDesktopComputer /> New</button>
+            <button onClick={() => setNewRepo(true)}><HiOutlineDesktopComputer /> New</button>
           </S.ButtonNewRepo>
         </S.SearchArea>
 
-        <RepositoriesList valueToFilter={valueToFilter} setValueToFilter={setValueToFilter} />
+        <RepositoriesList valueToFilter={valueToFilter} setValueToFilter={setValueToFilter} inputFilter={inputFilter} />
+
+        {newRepo && <NewRepositorie setNewRepo={setNewRepo} />}
       </S.RepoContainer>
     </>
   )

@@ -107,7 +107,7 @@ export const TagLang = styled.div`
     border: 1px solid rgba(255,255,255,0.2);
     margin-right: .2rem;
 
-    &.javaScript {
+    &.javascript {
       background: #f1e05a;
     }
 
