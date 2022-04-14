@@ -3,8 +3,6 @@ import * as S from './NewRepositorie.styles';
 import { IoCloseSharp } from 'react-icons/io5';
 import repoList from '../RepositoriesList/repoList';
 
-// console.log(repoList);
-
 const NewRepositorie = ({ setNewRepo }) => {
   const inputRepoTitle = useRef();
   const inputRepoDescription = useRef();
@@ -20,7 +18,6 @@ const NewRepositorie = ({ setNewRepo }) => {
 
   const setDatas = () => {
     setType(selectType.current.value);
-    // console.log(selectType.current.value)
     setRepoTitle(inputRepoTitle.current.value);
     setRepoDescription(inputRepoDescription.current.value);
     setLicense(selectLicense.current.value);
@@ -37,8 +34,8 @@ const NewRepositorie = ({ setNewRepo }) => {
       license: license ? license : undefined,
       lang: lang ? lang : undefined,
     }
-      // console.log(newRepoDatas)
-      repoList.unshift(newRepoDatas);
+  
+    repoList.unshift(newRepoDatas);
   }, [type, repoTitle, repoDescription, license, lang]);
 
   const handleNewRepoModal = ({ target, currentTarget }) => {

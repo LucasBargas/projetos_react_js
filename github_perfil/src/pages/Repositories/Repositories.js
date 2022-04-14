@@ -11,7 +11,7 @@ const Repositories = () => {
   const [valueToFilter, setValueToFilter] = useState('All');
   const [typeButton, setTypeButton] = useState(false);
   const [languageButton, setLanguageButton] = useState(false);
-  const [newRepo, setNewRepo] = useState(true);
+  const [newRepo, setNewRepo] = useState(null);
 
   const handleValueToFilter = ({ target }) => {
     setValueToFilter((target.innerText));
