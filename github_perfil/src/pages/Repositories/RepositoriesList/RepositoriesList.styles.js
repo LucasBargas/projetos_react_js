@@ -104,18 +104,6 @@ export const RepoTags = styled.div`
   flex-wrap: wrap;
   align-items: center;
   gap: 1.5rem;
-
-  button {
-    padding: 3px 12px;
-    font-size: 12px;
-    line-height: 20px;
-    color: #ffffff;
-    box-shadow: 0px 0px transparent, 0px 0px transparent;
-    border: 1px solid rgba(240,246,252,0.1);
-    border-radius: 6px;
-    background: #21262d;
-    color: #C9D1D9;
-  }
 `;
 
 export const TagLang = styled.div`

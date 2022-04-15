@@ -4,7 +4,7 @@ import repoList from './repoList';
 import { IoCloseSharp } from 'react-icons/io5';
 import { GoLaw } from 'react-icons/go';
 
-const RepositoriesList = ({ valueToFilter, setValueToFilter, inputFilter }) => {
+const RepositoriesList = ({ valueToFilter, setValueToFilter }) => {
   const [resultLength, setResultLength] = useState(null);
 
   const repoListFilter = repoList.filter(repoFilter => 
@@ -14,10 +14,6 @@ const RepositoriesList = ({ valueToFilter, setValueToFilter, inputFilter }) => {
   useEffect(() => {
     setResultLength(repoListFilter.length);
   }, [repoListFilter.length]);
-
-  const deleteRepo = ({ target }) => {
-    if (window.confirm('Are you sure about that?')) target.closest('li').remove();
-  }
 
   return (
     <S.RepoListArea>
@@ -33,7 +29,7 @@ const RepositoriesList = ({ valueToFilter, setValueToFilter, inputFilter }) => {
           </S.ClearFilterMessage>
         )}
         { valueToFilter && (
-          repoListFilter.map(repoMap => (
+          repoListFilter.map((repoMap) => (
             <li key={repoMap.repoTitle}>
               <S.RepoTitle>
                 <a href={`#${repoMap.repoTitle}`}>{repoMap.repoTitle}</a>
@@ -41,17 +37,14 @@ const RepositoriesList = ({ valueToFilter, setValueToFilter, inputFilter }) => {
               </S.RepoTitle>
               <p>{repoMap.repoDescription}</p>
               <S.RepoTags>
-                <>
-                  <S.TagLang>
-                    <span className={repoMap.lang.toLowerCase()}></span>
-                    {repoMap.lang}
-                  </S.TagLang>
-                  <S.TagLicense>
-                    {repoMap.license && <GoLaw />}
-                    {repoMap.license}
-                  </S.TagLicense>
-                </>
-                <button onClick={deleteRepo}>Delete repository</button>
+                <S.TagLang>
+                  <span className={repoMap.lang.toLowerCase()}></span>
+                  {repoMap.lang}
+                </S.TagLang>
+                <S.TagLicense>
+                  {repoMap.license && <GoLaw />}
+                  {repoMap.license}
+                </S.TagLicense>
               </S.RepoTags>
             </li>
           ))
