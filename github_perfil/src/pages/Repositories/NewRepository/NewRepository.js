@@ -63,7 +63,6 @@ const NewRepositorie = ({ setNewRepo }) => {
 
           <S.FormRepo onClick={(e) => e.preventDefault()}>
             <input ref={inputRepoTitle} id='title' type="text" placeholder='Set the Title...' />
-
             <textarea ref={inputRepoDescription} id='desc' type="text" placeholder='Set the Description...' />
 
             <S.SelectArea>

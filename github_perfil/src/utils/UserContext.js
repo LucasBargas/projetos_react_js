@@ -10,16 +10,16 @@ export const UserStorage = ({ children }) => {
 
   return (
     <UserContext.Provider 
-    value={{ 
-      name,
-      username,
-      bio,
-      website,
-      setName,
-      setUsername,
-      setBio,
-      setWebsite
-     }}
+      value={{ 
+        name,
+        username,
+        bio,
+        website,
+        setName,
+        setUsername,
+        setBio,
+        setWebsite
+      }}
     >
       {children}
     </UserContext.Provider>
