@@ -102,6 +102,7 @@ export const SelectArea = styled.div`
   select {
     width: calc(100% / 3);
     height: 1.75rem;
+    cursor: pointer;
 
     @media (max-width: 414px) {
       width: 80%;
