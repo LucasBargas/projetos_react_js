@@ -43,7 +43,9 @@ export const UserPhoto = styled.div`
   }
 
   div {
-    padding-left: 1rem;
+    @media (max-width: 480px) {
+      padding-left: 1rem;
+    }
   }
 
   h2 {
