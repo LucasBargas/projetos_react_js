@@ -74,7 +74,7 @@ export const Datas = styled.div`
   }
 
   p {
-    font-size: 1rem;
+    font-size: .9375rem;
   }
 
   button {
