@@ -1,8 +1,12 @@
 import * as S from './NavHeader.styles';
 import userImage from '../../../assets/images/user-photo.png';
 import { FiLogOut } from 'react-icons/fi';
+import { UserContext } from '../../../utils/UserContext';
+import { useContext } from 'react';
 
 const NavHeader = ({ nav }) => {
+  const { username } = useContext(UserContext);
+
   return (
     <S.Nav nav={nav}>
       <ul>
@@ -16,8 +20,8 @@ const NavHeader = ({ nav }) => {
         <li><a href="#sponsors">Sponsors</a></li>
         <li><a href="#settings">Settings</a></li>
         <li><a href="#user">
-          <img src={userImage} alt="" />
-          <span>LucasBargas</span>
+          <img src={userImage} alt="User" />
+          <span>{username}</span>
         </a></li>
         <li><a href="#sign-out">
           <FiLogOut />

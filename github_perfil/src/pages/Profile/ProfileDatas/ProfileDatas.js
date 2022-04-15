@@ -7,17 +7,17 @@ import { BiLink } from 'react-icons/bi';
 import { BsTwitter } from 'react-icons/bs';
 import { RiBuildingLine } from 'react-icons/ri';
 import { IoPeopleOutline } from 'react-icons/io5';
+import { UserContext } from '../../../utils/UserContext';
+import { useContext } from "react";
 
 const ProfileDatas = () => {
+  const { name, username, bio, website, setName, setUsername, setBio, setWebsite } = useContext(UserContext);
+
   const [datasUser, setDatasUser] = useState(true);
   const [updateForm, setUpdateForm] = useState(null);
 
-  const [name, setName] = useState(null);
-  const [username, setUsername] = useState(null);
-  const [bio, setBio] = useState(null);
   const [location, setLocation] = useState(null);
   const [company, setCompany] = useState(null);
-  const [website, setWebsite] = useState(null);
   const [twitter, setTwitter] = useState(null);
 
   const getLocalStorage = value => window.localStorage.getItem(value);
@@ -52,7 +52,7 @@ const ProfileDatas = () => {
     if (getLocalStorage('company') !== null) setCompany(getLocalStorage('company'));
     if (getLocalStorage('website') !== null) setWebsite(getLocalStorage('website'));
     if (getLocalStorage('twitter') !== null) setTwitter(getLocalStorage('twitter'));
-  }, []);
+  }, [setName, setUsername, setBio, setWebsite]);
 
   return (
     <S.ProfileDatasArea>

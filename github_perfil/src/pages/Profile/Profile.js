@@ -4,11 +4,15 @@ import ProfileDatas from "./ProfileDatas/ProfileDatas";
 import ProfilePages from "./ProfilePages/ProfilePages";
 import Container from '../../styles/Container';
 import ProfileArea from "./Profile.styles";
+import { UserContext } from "../../utils/UserContext";
+import { useContext } from "react";
 
 const Profile = () => {
+  const { name, username } = useContext(UserContext);
+
   return (
     <>
-      <Head title='LucasBargas (Lucas Bargas)' />
+      <Head title={`${name}(${username})`} />
       <main>
         <Container>
           <ProfileArea>

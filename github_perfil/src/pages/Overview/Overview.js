@@ -10,24 +10,28 @@ import gmail from '../../assets/images/medias/gmail.svg';
 import linkedin from '../../assets/images/medias/linkedin.svg';
 import whatsapp from '../../assets/images/medias/whatsapp.svg';
 import Pinned from './Pinned/Pinned';
+import { UserContext } from '../../utils/UserContext';
+import { useContext } from 'react';
 
 const Overview = () => {
+  const { name, username, bio, website } = useContext(UserContext);
+
   return (
     <>
-      <Head title='LucasBargas (Lucas Bargas)' />
+      <Head title={`${name}(${username})`} />
       <S.OverviewContainer>
         <S.SmallText>
           <span>
-            <Link to='/'>LucasBargas</Link> / README<span>.md</span>
+            <Link to='/'>{username}</Link> / README<span>.md</span>
           </span>
         </S.SmallText>
 
         <S.MainTitle>
-          <h1>Olá Meu nome é Lucas Bargas</h1>
+          <h1>Olá Meu nome é {name}</h1>
         </S.MainTitle>
 
         <S.AboutUser>
-          <h2>Sou um apaixonado estudante Front End</h2>
+          <h2>{bio}</h2>
 
           <S.UserStacks>
             <figure>
@@ -67,7 +71,7 @@ const Overview = () => {
 
           <S.WebsiteUser>
             <h2>Meu portfólio também está disponível em meu site pessoal:</h2>
-            <a href="https://projetoslucasbargas.com/" target="_blank" rel="noopener noreferrer">https://projetoslucasbargas.com/</a>
+            <a href={website} target="_blank" rel="noopener noreferrer">{website}</a>
           </S.WebsiteUser>
         </S.AboutUser>
       </S.OverviewContainer>
