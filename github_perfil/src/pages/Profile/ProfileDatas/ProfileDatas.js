@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import * as S from './ProfileDatas.styles';
 import userPhoto from '../../../assets/images/user-photo.png';
 import { Link } from 'react-router-dom';
@@ -8,7 +8,7 @@ import { BsTwitter } from 'react-icons/bs';
 import { RiBuildingLine } from 'react-icons/ri';
 import { IoPeopleOutline } from 'react-icons/io5';
 import { UserContext } from '../../../utils/UserContext';
-import { useContext } from "react";
+import Input from '../../../components/Input/Input';
 
 const ProfileDatas = () => {
   const { name, username, bio, website, setName, setUsername, setBio, setWebsite } = useContext(UserContext);
@@ -88,10 +88,10 @@ const ProfileDatas = () => {
 
       {updateForm && <S.UpdateDatas onSubmit={handleSubmitUpdate}>
         <label htmlFor='name'>Name</label>
-        <input type="text" id='name' placeholder='Name' value={name} onChange={({ target }) => setName(target.value)} />
+        <Input type="text" id='name' placeholder='Name' value={name} onChange={({ target }) => setName(target.value)} />
 
         <label htmlFor='userName'>Username</label>
-        <input type="text" id='userName' placeholder='Username' value={username} onChange={({ target }) => setUsername(target.value)} />
+        <Input type="text" id='userName' placeholder='Username' value={username} onChange={({ target }) => setUsername(target.value)} />
 
         <label htmlFor='bio'>Bio</label>
         <textarea id='bio' placeholder='Add a bio' value={bio} onChange={({ target }) => setBio(target.value)} />
@@ -99,19 +99,19 @@ const ProfileDatas = () => {
 
         <div>
           <span><RiBuildingLine /></span>
-          <input type="text" placeholder='Company' value={company} onChange={({ target }) => setCompany(target.value)} />
+          <Input type="text" placeholder='Company' value={company} onChange={({ target }) => setCompany(target.value)} />
         </div>
         <div>
           <span><FiMapPin /></span>
-          <input type="text" placeholder='Location' value={location} onChange={({ target }) => setLocation(target.value)} />
+          <Input type="text" placeholder='Location' value={location} onChange={({ target }) => setLocation(target.value)} />
         </div>
         <div>
           <span><BiLink /></span>
-          <input type="text" placeholder='Website' value={website} onChange={({ target }) => setWebsite(target.value)} />
+          <Input type="text" placeholder='Website' value={website} onChange={({ target }) => setWebsite(target.value)} />
         </div>
         <div>
           <span><BsTwitter /></span>
-          <input type="text" placeholder='Twitter username' value={twitter} onChange={({ target }) => setTwitter(target.value)} />
+          <Input type="text" placeholder='Twitter' value={twitter} onChange={({ target }) => setTwitter(target.value)} />
         </div>
         <button>Save</button>
       </S.UpdateDatas> }

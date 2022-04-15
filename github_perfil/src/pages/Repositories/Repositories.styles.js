@@ -19,18 +19,9 @@ export const SearchArea = styled.div`
   }
 
   input {
-    width: 100%;
-    padding: 5px 12px;
-    color: #c9d1d9;
-
     @media (max-width: 480px) {
       order: 2;
       margin-top: 1rem;
-    }
-
-    &:focus {
-      border-color: #1158c7;
-      box-shadow: 0px 0px 6px 0px #1158c7;
     }
 
     &::placeholder {

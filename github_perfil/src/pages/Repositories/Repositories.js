@@ -5,6 +5,7 @@ import { IoCloseSharp } from 'react-icons/io5';
 import { useEffect, useState } from 'react';
 import RepositoriesList from './RepositoriesList/RepositoriesList';
 import NewRepository from './NewRepository/NewRepository';
+import Input from '../../components/Input/Input';
 
 const Repositories = () => {
   const [valueToFilter, setValueToFilter] = useState('All');
@@ -40,7 +41,6 @@ const Repositories = () => {
     }
 
     document.addEventListener('click', handleDocClick);
-
     return () => document.removeEventListener('click', handleDocClick);
   }, []);
 
@@ -53,7 +53,7 @@ const Repositories = () => {
       <Head title='Your Repositories' />
       <S.RepoContainer>
         <S.SearchArea>
-          <input type="text" placeholder='Find a repository...' />
+          <Input type="text" placeholder='Find a repository...' />
 
           <S.FilterButtons>
             <S.Button className='filterButton type'>

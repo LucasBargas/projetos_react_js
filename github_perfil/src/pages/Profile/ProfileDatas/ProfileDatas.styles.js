@@ -138,12 +138,12 @@ export const Follows = styled.div`
 `;
 
 export const UpdateDatas = styled.form`
-  label, input, textarea {
+  label, textarea {
     display: block;
     width: 100%;
   }
 
-  label, input, textarea, p, strong {
+  label, textarea, p, strong {
     color: #C9D1D9;
     font-size: .875rem;
   }
@@ -154,11 +154,6 @@ export const UpdateDatas = styled.form`
     &:not(:first-of-type) {
       margin-top: 12px;
     }
-  }
-
-  input:nth-of-type(1), input:nth-of-type(2) {
-    height: 2rem;
-    padding: 5px 12px
   }
 
   textarea {
@@ -189,10 +184,6 @@ export const UpdateDatas = styled.form`
       position: relative;
       top: 5px;
       margin-right: 8px;
-    }
-
-    input {
-      height: 28px !important;
     }
 
     &:not(:first-of-type) {
