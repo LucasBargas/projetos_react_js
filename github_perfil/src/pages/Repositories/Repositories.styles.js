@@ -127,7 +127,7 @@ export const ButtonSubmenuContainer = styled.div`
 export const ButtonSubmenu = styled.nav`
   background: #161b22;
   margin-top: 7px;
-  box-shadow: 0px 0px transparent, 0px 0px transparent;
+  box-shadow: 0 8px 24px #010409;
   border: 1px solid rgba(240,246,252,0.1);
   border-radius: 6px;
   font-size: .75rem;
