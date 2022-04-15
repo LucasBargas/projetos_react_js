@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import * as S from './NewRepositorie.styles';
+import * as S from './NewRepository.styles';
 import { IoCloseSharp } from 'react-icons/io5';
 import repoList from '../RepositoriesList/repoList';
 
@@ -27,8 +27,8 @@ const NewRepositorie = ({ setNewRepo }) => {
   useEffect(() => {
     const newRepoDatas = {
       type: type ? type : undefined,
-      typeDefault: type && repoTitle && repoDescription && license && lang ? 'All' : undefined,
-      langDefault: type && repoTitle && repoDescription && license && lang ? 'All' : undefined,
+      typeDefault: type && repoTitle && license && lang ? 'All' : undefined,
+      langDefault: lang ? 'All' : undefined,
       repoTitle: repoTitle ? repoTitle : undefined,
       repoDescription: repoDescription ? repoDescription : undefined,
       license: license ? license : undefined,

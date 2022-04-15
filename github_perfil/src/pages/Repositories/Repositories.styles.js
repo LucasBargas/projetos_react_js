@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { animationModal } from './NewRepositorie/NewRepositorie.styles';
+import { animationModal } from './NewRepository/NewRepository.styles';
 
 export const RepoContainer = styled.section`
   color: #c9d1d9;

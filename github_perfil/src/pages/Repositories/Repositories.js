@@ -4,7 +4,7 @@ import { HiOutlineDesktopComputer } from 'react-icons/hi';
 import { IoCloseSharp } from 'react-icons/io5';
 import { useEffect, useState } from 'react';
 import RepositoriesList from './RepositoriesList/RepositoriesList';
-import NewRepositorie from './NewRepositorie/NewRepositorie';
+import NewRepository from './NewRepository/NewRepository';
 
 const Repositories = () => {
   const [valueToFilter, setValueToFilter] = useState('All');
@@ -38,7 +38,10 @@ const Repositories = () => {
     const handleDocClick = ({ target }) => {
       if (!target.closest('div.filterButton')) closeSubMenu();
     }
+
     document.addEventListener('click', handleDocClick);
+
+    return () => document.removeEventListener('click', handleDocClick);
   }, []);
 
   const handleOutsideClick = ({ target, currentTarget }) => {
@@ -97,7 +100,7 @@ const Repositories = () => {
 
         <RepositoriesList valueToFilter={valueToFilter} setValueToFilter={setValueToFilter} />
 
-        {newRepo && <NewRepositorie setNewRepo={setNewRepo} />}
+        {newRepo && <NewRepository setNewRepo={setNewRepo} />}
       </S.RepoContainer>
     </>
   )
