@@ -75,6 +75,10 @@ export const FormRepo = styled.form`
   flex-direction: column;
   gap: .5rem;
 
+  input, textarea {
+    padding: .75rem;
+  }
+
   #nome {
     height: 30px;
   }
@@ -97,6 +101,7 @@ export const SelectArea = styled.div`
 
   select {
     width: calc(100% / 3);
+    height: 1.75rem;
 
     @media (max-width: 414px) {
       width: 80%;
