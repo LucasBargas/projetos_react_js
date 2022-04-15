@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import * as Variables from '../../styles/Variables';
 
 export const OverviewContainer = styled.section`
-  border: 1px solid #30363d;
+  border: 1px solid ${Variables.BorderColor};
   border-radius: 6px;
   padding: 1.5rem;
-  color: #c9d1d9;
+  color: ${Variables.MainFontColor};
 
   @media(max-width: 360px) {
     padding: 1rem;
@@ -23,22 +24,22 @@ export const SmallText = styled.div`
     font-size: 12px;
     
     a {
-      color: #c9d1d9;
+      color: ${Variables.MainFontColor};
 
       &:hover {
-        color: #58a6ff;
+        color: ${Variables.LinkColor};
       }
     }
 
     span {
-      color: #8b949e;
+      color: ${Variables.GrayColor};
     }
   }
 `;
 
 export const MainTitle = styled.div`
   padding-bottom: .3rem;
-  border-bottom: 1px solid #21262d;
+  border-bottom: 1px solid ${Variables.DarkBtnColor};
 
   h1 {
     font-weight: 400;
@@ -83,7 +84,7 @@ export const WebsiteUser = styled.div`
     display: inline-block;
     margin-top: 1rem;
     font-size: .875rem;
-    color: #58a6ff;
+    color: ${Variables.LinkColor};
 
     &:hover {
       text-decoration: underline;

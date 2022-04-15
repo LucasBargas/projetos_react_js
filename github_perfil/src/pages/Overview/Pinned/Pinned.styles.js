@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import * as Variables from "../../../styles/Variables";
 
 export const PinnedContainer = styled.section`
   padding-top: 2rem;
@@ -6,7 +7,7 @@ export const PinnedContainer = styled.section`
   h2 {
     font-size: 1rem;
     font-weight: 400;
-    color: #C9D1D9;
+    color: ${Variables.MainFontColor};
   }
 `;
 
@@ -24,10 +25,10 @@ export const PinnedRepos = styled.div`
 export const PinnedRepoCard = styled.div`
   border-radius: 6px;
   padding: 1rem;
-  border: 1px solid #30363d;
+  border: 1px solid ${Variables.BorderColor};
 
   p {
-    color: #8b949e;
+    color: ${Variables.GrayColor};
     font-size: .75rem;
     margin: .5rem 0 .25rem 0;
   }
@@ -40,11 +41,11 @@ export const RepoTitle = styled.div`
   gap: .5rem;
 
   svg {
-    color: #8b949e;
+    color: ${Variables.GrayColor};
   }
 
   a {
-    color: #58a6ff;
+    color: ${Variables.LinkColor};
 
     &:hover {
       text-decoration: underline;
@@ -53,8 +54,8 @@ export const RepoTitle = styled.div`
 
   span {
     padding: .12rem .5rem;
-    color: #8b949e;
-    border: 1px solid #30363d;
+    color: ${Variables.GrayColor};
+    border: 1px solid ${Variables.BorderColor};
     border-radius: 2rem;
     font-size: .75rem;
   }

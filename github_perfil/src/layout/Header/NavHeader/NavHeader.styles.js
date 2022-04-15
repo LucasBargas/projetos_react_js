@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as Variables from '../../../styles/Variables';
 
 export const Nav = styled.nav`
   width: 100%;
@@ -25,7 +26,7 @@ export const Nav = styled.nav`
       width: 100%;
       max-width: 270px;
       height: 28px;
-      color: #ffffff; 
+      color: ${Variables.LightColor}; 
       transition: .4s;
 
       @media (max-width: 768px) {
@@ -35,7 +36,7 @@ export const Nav = styled.nav`
 
       &:focus {
         max-width: 518px;
-        border-color: #1158c7;
+        border-color: ${Variables.LinkColor};
 
         @media (max-width: 768px) {
           max-width: 100%;
@@ -43,14 +44,14 @@ export const Nav = styled.nav`
       }
 
       &::placeholder {
-        color: #cccccc;
+        color: ${Variables.LightColor};
       }
     }
 
     li {
       &:first-of-type {
         @media (max-width: 768px) {
-          border-top: 1px solid #30363d;
+          border-top: 1px solid ${Variables.BorderColor};
         }
       }
 
@@ -79,13 +80,13 @@ export const Nav = styled.nav`
         }
 
         &:hover {
-          color: #cccccc;
+          color: ${Variables.LightColor};
         }
       }
 
       &:not(:last-of-type) {
         @media (max-width: 768px) {
-          border-bottom: 1px solid #30363d;
+          border-bottom: 1px solid ${Variables.BorderColor};
         }
       }
 

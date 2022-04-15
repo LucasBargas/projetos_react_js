@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as Variables from '../../../styles/Variables';
 
 export const ProfileDatasArea = styled.div`
   grid-column: 1 / 2;
@@ -11,9 +12,9 @@ export const ProfileDatasArea = styled.div`
     order: 1;
   } 
 
-  input:focus, textarea:focus {
-    border-color: #1158c7;
-    box-shadow: 0px 0px 6px 0px #1158c7;
+  textarea:focus {
+    border-color: ${Variables.BorderFocus};
+    box-shadow: 0px 0px 6px 0px ${Variables.BorderFocus};
   }
 `;
 
@@ -52,7 +53,7 @@ export const UserPhoto = styled.div`
     margin-top: 1rem;
     font-size: 1.5rem;
     font-weight: 500;
-    color: #C9D1D9;
+    color: ${Variables.MainFontColor};
 
     @media (max-width: 480px) {
       margin-top: 0;
@@ -63,14 +64,14 @@ export const UserPhoto = styled.div`
   h3 {
     font-weight: 300;
     font-size: 1.25rem;
-    color: #8b949e;
+    color: ${Variables.GrayColor};
     line-height: 1.5rem;
   }
 `;
 
 export const Datas = styled.div`
   p, a, li, button, span, strong, svg {
-    color: #C9D1D9;
+    color: ${Variables.MainFontColor};
   }
 
   p {
@@ -86,12 +87,12 @@ export const Datas = styled.div`
     font-weight: 500;
     box-shadow: 0px 0px transparent, 0px 0px transparent;
     border: 1px solid rgba(240,246,252,0.1);
-    background: #21262d;
+    background: ${Variables.DarkBtnColor};
     border-radius: 6px;
     transition: .2;
 
     &:hover {
-      background: #30363d;
+      background: ${Variables.BorderColor};
       border-color: rgba(240,246,252,0.4);
     }
   }
@@ -109,7 +110,7 @@ export const Datas = styled.div`
     }
 
     a:hover {
-      color: #58a6ff;
+      color: ${Variables.LinkColor};
       text-decoration: underline;
     }
 
@@ -124,15 +125,15 @@ export const Follows = styled.div`
   padding: 1rem 0 1.25rem 0;
 
   a {
-    color: #8b949e;
+    color: ${Variables.GrayColor};
     font-size: .875rem;
   }
 
   a:hover {
-    color: #58a6ff;
+    color: ${Variables.LinkColor};
 
     svg, strong {
-      color: #58a6ff;
+      color: ${Variables.LinkColor};
     }
   }
 `;
@@ -144,7 +145,7 @@ export const UpdateDatas = styled.form`
   }
 
   label, textarea, p, strong {
-    color: #C9D1D9;
+    color: ${Variables.MainFontColor};
     font-size: .875rem;
   }
 
@@ -164,12 +165,12 @@ export const UpdateDatas = styled.form`
   }
 
   p {
-    color: #8b949e;
+    color: ${Variables.GrayColor};
     font-size: 12px;
     margin: 8px 0 10px 0;
 
     strong {
-      color: #8b949e;
+      color: ${Variables.GrayColor};
       font-weight: 400;
       font-size: 12px;
     }
@@ -180,7 +181,7 @@ export const UpdateDatas = styled.form`
 
     span {
       font-size: 1rem;
-      color: #C9D1D9;
+      color: ${Variables.MainFontColor};
       position: relative;
       top: 5px;
       margin-right: 8px;
@@ -196,14 +197,14 @@ export const UpdateDatas = styled.form`
     padding: 3px 12px;
     font-size: 12px;
     line-height: 20px;
-    color: #ffffff;
-    background: #238636;
+    color: ${Variables.LightColor};
+    background: ${Variables.GreenColor};
     border: 1px solid rgba(240,246,252,0.1);
     border-radius: 6px;
     transition: .2s;
 
     &:hover {
-      background: #26a641;
+      background: ${Variables.GreenColorHover};
     }
   }
 `;

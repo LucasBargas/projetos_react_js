@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import * as Variables from '../../../styles/Variables';
 
 export const animationModal = keyframes`
   from {
@@ -38,7 +39,7 @@ export const CloseModal = styled.div`
     align-items: center;
     justify-content: center;
     background: transparent;
-    color: #ffffff;
+    color: ${Variables.LightColor};
     padding: .5rem;
     font-size: 1.5rem;
   }
@@ -46,7 +47,7 @@ export const CloseModal = styled.div`
 
 export const NewRepoModal = styled.div`
   border: 1px solid rgba(240,246,252,0.1);
-  background: #21262d;
+  background: ${Variables.DarkBtnColor};
   width: 40%;
   border-radius: 6px;
   animation: ${animationModal} .5s forwards;
@@ -120,16 +121,21 @@ export const ModalReposButtons = styled.div`
     padding: 3px 12px;
     font-size: 12px;
     line-height: 20px;
-    color: #ffffff;
+    color: ${Variables.LightColor};
     border: 1px solid rgba(240,246,252,0.1);
     border-radius: 6px;
   }
 
   #send {
-    background: #238636;
+    background: ${Variables.GreenColor};
+    transition: .2s;
+
+    &:hover {
+      background: ${Variables.GreenColorHover};
+    }
   }
 
   #cancel {
-    background: #0d1017;
+    background: ${Variables.PrimaryBgColor};
   }
 `;

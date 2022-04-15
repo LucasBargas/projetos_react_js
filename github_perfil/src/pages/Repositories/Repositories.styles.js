@@ -1,15 +1,16 @@
 import styled from 'styled-components'
+import * as Variables from '../../styles/Variables';
 import { animationModal } from './NewRepository/NewRepository.styles';
 
 export const RepoContainer = styled.section`
-  color: #c9d1d9;
+  color: ${Variables.MainFontColor};
 `;
 
 export const SearchArea = styled.div`
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  border-bottom: 1px solid #21262d;
+  border-bottom: 1px solid ${Variables.DarkBtnColor};
   padding-bottom: 1rem;
 
   @media (max-width: 480px) {
@@ -25,7 +26,7 @@ export const SearchArea = styled.div`
     }
 
     &::placeholder {
-      color: #c9d1d9;
+      color: ${Variables.MainFontColor};
       font-size: .8125rem;
       opacity: .5;
     }
@@ -52,7 +53,7 @@ export const Button = styled.div`
     padding: 5px 16px;
     box-shadow: 0px 0px transparent, 0px 0px transparent;
     border: 1px solid rgba(240,246,252,0.1);
-    background: #21262d;
+    background: ${Variables.DarkBtnColor};
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -65,7 +66,7 @@ export const Button = styled.div`
       height: 0;
       border-left: 4px solid transparent;
       border-right: 4px solid transparent;
-      border-bottom: 4px solid #c9d1d9;
+      border-bottom: 4px solid ${Variables.MainFontColor};
       transform: rotate(180deg);
       cursor: pointer;
       position: relative;
@@ -87,10 +88,15 @@ export const ButtonNewRepo = styled.div`
     font-size: .875rem;
     font-weight: 500;
     line-height: 20px;
-    color: #ffffff;
-    background: #238636;
+    color: ${Variables.LightColor};
+    background: ${Variables.GreenColor};
     border: 1px solid rgba(240,246,252,0.1);
     border-radius: 6px;
+    transition: .2s;
+
+    &:hover {
+      background: ${Variables.GreenColorHover};
+    }
 
     @media (max-width: 480px) {
       width: 100%;
@@ -125,7 +131,7 @@ export const ButtonSubmenuContainer = styled.div`
 `;
 
 export const ButtonSubmenu = styled.nav`
-  background: #161b22;
+  background: ${Variables.SecondaryBgColor};
   margin-top: 7px;
   box-shadow: 0 8px 24px #010409;
   border: 1px solid rgba(240,246,252,0.1);
@@ -146,7 +152,7 @@ export const ButtonSubmenu = styled.nav`
     }
 
     &:not(:last-of-type) {
-      border-bottom: 1px solid #21262d;
+      border-bottom: 1px solid ${Variables.DarkBtnColor};
     }
   }
 `;
@@ -156,11 +162,11 @@ export const CloseButtonSubmenu = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 7px 7px 7px 16px;
-  border-bottom: 1px solid #21262d;
+  border-bottom: 1px solid ${Variables.DarkBtnColor};
 
   button {
     background: transparent;
-    color: #8b949e;
+    color: ${Variables.GrayColor};
     font-size: 1rem;
 
     @media (max-width: 480px) {
@@ -168,7 +174,7 @@ export const CloseButtonSubmenu = styled.div`
     }
 
     &:hover {
-      color: #c9d1d9;
+      color: ${Variables.MainFontColor};
     }
   }
 `;

@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import * as Variables from './Variables';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -14,17 +15,17 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Roboto', sans-serif;
-    background: #0d1017;
-    color: #ffffff;
+    font-family: ${Variables.FontFamily};
+    background: ${Variables.PrimaryBgColor};
+    color: ${Variables.LightColor};
 
     @media (max-width: 768px) {
-      background: #161b21;
+      background: ${Variables.SecondaryBgColor};
     }
 
     a {
       text-decoration: none;
-      color: #ffffff;
+      color: ${Variables.LightColor};
     }
 
     ul {
@@ -37,20 +38,20 @@ const GlobalStyle = createGlobalStyle`
     }
 
     input, textarea {
-      border: 1px solid #30363d;
-      color: #c9d1d9;
+      border: 1px solid ${Variables.BorderColor};
+      color: ${Variables.MainFontColor};
       font-size: .875rem;
       padding: 5px 12px;
       border-radius: 6px;
       box-shadow: 0px 0px transparent;
-      background: #0d1017;
-      font-family: 'Roboto', sans-serif;
+      background: ${Variables.PrimaryBgColor};
+      font-family: ${Variables.FontFamily};
     }
 
     button {
       cursor: pointer;
       border: none;
-      font-family: 'Roboto', sans-serif;
+      font-family: ${Variables.FontFamily};
     }
   }
 `;

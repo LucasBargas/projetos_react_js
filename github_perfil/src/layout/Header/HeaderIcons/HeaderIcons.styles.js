@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as Variables from '../../../styles/Variables';
 
 export const HeaderIcons = styled.nav`
   display: flex;
@@ -21,6 +22,7 @@ export const HeaderIcons = styled.nav`
     li {
       display: flex;
       align-items: center;
+      cursor: pointer;
 
       &:nth-of-type(2),
       &:nth-of-type(3) {
@@ -31,24 +33,22 @@ export const HeaderIcons = styled.nav`
 
       &:hover {
         svg {
-          color: #cccccc;
+          color: ${Variables.LightGray};
         }
 
         span {
-          border-bottom: 4px solid #cccccc;
+          border-bottom: 4px solid ${Variables.LightGray};
         }
       }
 
       svg {
         font-size: 1.25rem;
-        cursor: pointer;
-        color: #ffffff;
+        color: ${Variables.LightColor};
       }
 
       img {
         width: 20px;
         height: 20px;
-        cursor: pointer;
         border-radius: 50%;
         object-fit: cover;
       }
@@ -60,9 +60,8 @@ export const HeaderIcons = styled.nav`
         height: 0;
         border-left: 4px solid transparent;
         border-right: 4px solid transparent;
-        border-bottom: 4px solid #ffffff;
+        border-bottom: 4px solid ${Variables.LightColor};
         transform: rotate(180deg);
-        cursor: pointer;
       }
     }
   }

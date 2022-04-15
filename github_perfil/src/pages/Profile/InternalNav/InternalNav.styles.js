@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import * as Variables from '../../../styles/Variables';
 
 export const InternalNavContainer = styled.section`
-  border-bottom: 1px solid #30363d;
+  border-bottom: 1px solid ${Variables.BorderColor};
   grid-column: 1 / 5;
   display: flex;
   justify-content: flex-end;
@@ -36,7 +37,7 @@ export const InternalNavContainer = styled.section`
         align-items: center;
         padding: 8px 16px 16px 16px;
         border-bottom: 2px solid transparent;
-        color: #c9d1d9;
+        color: ${Variables.MainFontColor};
 
         &:hover {
           border-bottom-color: #6e7681;
@@ -47,7 +48,7 @@ export const InternalNavContainer = styled.section`
           top: 2px;
           margin-right: 6px;
           font-size: 1rem;
-          color: #c9d1d9;
+          color: ${Variables.MainFontColor};
 
           @media (max-width: 480px) {
             display: none;
