@@ -56,15 +56,15 @@ const Overview = () => {
 
             <S.ContactsRow>
               <figure>
-                <a href="#whatsapp"><img src={whatsapp} alt="" /></a>
+                <a href="#whatsapp"><img src={whatsapp} alt="User WhatsApp" /></a>
               </figure>
 
               <figure>
-                <a href="#linkedin"><img src={linkedin} alt="" /></a>
+                <a href="#linkedin"><img src={linkedin} alt="User Linkedin" /></a>
               </figure>
 
               <figure>
-                <a href="#gmail"><img src={gmail} alt="" /></a>
+                <a href="#gmail"><img src={gmail} alt="User Gmail" /></a>
               </figure>
             </S.ContactsRow>
           </S.ContactsUser>
