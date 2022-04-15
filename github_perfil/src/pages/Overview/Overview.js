@@ -18,20 +18,20 @@ const Overview = () => {
 
   return (
     <>
-      <Head title={`${name}(${username})`} />
+      <Head title={name && username ? `${name}(${username})` : 'Lucas Bargas(LucasBargas)'} />
       <S.OverviewContainer>
         <S.SmallText>
           <span>
-            <Link to='/'>{username}</Link> / README<span>.md</span>
+            <Link to='/'>{username ? username : 'LucasBargas'}</Link> / README<span>.md</span>
           </span>
         </S.SmallText>
 
         <S.MainTitle>
-          <h1>Olá Meu nome é {name}</h1>
+          <h1>Olá! Meu nome é {name ? name : 'Lucas Bargas'}</h1>
         </S.MainTitle>
 
         <S.AboutUser>
-          <h2>{bio}</h2>
+          <h2>{bio ? bio : 'Sou um apaixonado estudante Front End.'}</h2>
 
           <S.UserStacks>
             <figure>
@@ -71,7 +71,7 @@ const Overview = () => {
 
           <S.WebsiteUser>
             <h2>Meu portfólio também está disponível em meu site pessoal:</h2>
-            <a href={website} target="_blank" rel="noopener noreferrer">{website}</a>
+            <a href={website ? website : 'https://projetoslucasbargas.com'} target="_blank" rel="noopener noreferrer">{website ? website : 'https://projetoslucasbargas.com/'}</a>
           </S.WebsiteUser>
         </S.AboutUser>
       </S.OverviewContainer>

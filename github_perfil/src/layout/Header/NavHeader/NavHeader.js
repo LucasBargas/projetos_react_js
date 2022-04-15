@@ -21,7 +21,7 @@ const NavHeader = ({ nav }) => {
         <li><a href="#settings">Settings</a></li>
         <li><a href="#user">
           <img src={userImage} alt="User" />
-          <span>{username}</span>
+          <span>{username ? username : 'LucasBargas'}</span>
         </a></li>
         <li><a href="#sign-out">
           <FiLogOut />

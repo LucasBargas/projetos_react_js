@@ -63,15 +63,15 @@ const ProfileDatas = () => {
         <div>
           {datasUser && (
             <>
-              {name && <h2>{name}</h2>}
-              {username && <h3>{username}</h3>}
+              {name ? <h2>{name}</h2> : <h2>Lucas Bargas</h2>}
+              {username ? <h3>{username}</h3> : <h3>LucasBargas</h3>}
             </>
           )}
         </div>
       </S.UserPhoto>
 
       {datasUser && <S.Datas>
-        {bio && <p>{bio}</p>}
+        {bio ? <p>{bio}</p> : <p>Sou um paixonado estudante Front End.</p>}
         <button onClick={handleUpdateUser}>Edit Profile</button>
         <S.Follows>
           <a href="#follower"><IoPeopleOutline /> <strong>1</strong> follower</a>
@@ -80,8 +80,8 @@ const ProfileDatas = () => {
         </S.Follows>
         <ul>
           {company && <li><RiBuildingLine /> {company}</li>}
-          {location && <li><FiMapPin /> {location}</li>}
-          {website && <li><a href={website}target="_blank" rel="noopener noreferrer"><BiLink /> {website}</a></li>}
+          {location ? <li><FiMapPin /> {location}</li> : <li><FiMapPin /> São Paulo, SP</li>}
+          {website ? <li><a href={website} target="_blank" rel="noopener noreferrer"><BiLink /> {website}</a></li> : <li><a href='https://projetoslucasbargas.com' target="_blank" rel="noopener noreferrer"><BiLink /> https://projetoslucasbargas.com/</a></li>}
           {twitter && <li><a href={twitter}target="_blank" rel="noopener noreferrer"><BsTwitter />  @{twitter}</a></li>}
         </ul>
       </S.Datas>}
