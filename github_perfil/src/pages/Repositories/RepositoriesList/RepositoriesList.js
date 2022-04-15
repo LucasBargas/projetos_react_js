@@ -48,9 +48,7 @@ const RepositoriesList = ({ valueToFilter, setValueToFilter }) => {
               </S.RepoTags>
             </li>
           ))
-        )
-          
-        }
+        )}
       </ul>
     </S.RepoListArea>
   )
