@@ -52,6 +52,14 @@ const repoList = [
     lang: 'CSS',
   },
   {
+    type: 'Private',
+    typeDefault: 'All',
+    langDefault: 'All',
+    repoTitle: 'projeto_private_exemplo4',
+    repoDescription: 'Morbi at est nec enim scelerisque condimentum ut sit amet felis. Aliquam maximus leo at ex congue laoreet. Praesent hendrerit diam ut tellus pulvinar hendrerit.',
+    lang: 'Sass',
+  },
+  {
     type: 'Public',
     typeDefault: 'All',
     langDefault: 'All',

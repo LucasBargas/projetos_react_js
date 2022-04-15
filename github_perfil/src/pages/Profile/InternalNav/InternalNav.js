@@ -5,6 +5,7 @@ import { FiBookOpen } from 'react-icons/fi';
 import { HiOutlineDesktopComputer } from 'react-icons/hi';
 import { RiProjectorLine } from 'react-icons/ri';
 import { BsBox, BsStar } from 'react-icons/bs';
+import repoList from '../../Repositories/RepositoriesList/repoList';
 
 const InternalNav = () => {
   return (
@@ -21,7 +22,7 @@ const InternalNav = () => {
           <li>
             <NavLink to='repositories'>
               <span><HiOutlineDesktopComputer /></span> 
-              Repositories
+              Repositories <S.RepositoriesLength>{repoList.length}</S.RepositoriesLength>
             </NavLink>
           </li>
 

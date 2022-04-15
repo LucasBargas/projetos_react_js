@@ -62,3 +62,14 @@ export const InternalNavContainer = styled.section`
     }
   }
 `;
+
+export const RepositoriesLength = styled.span`
+  padding: 0 6px;
+  font-size: .75rem !important;
+  font-weight: 500;
+  line-height: 18px;
+  border-radius: .75rem;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background: rgba(110, 118, 129, .4);
+  margin-left: 7px;
+`;
