@@ -48,6 +48,7 @@ export const CloseModal = styled.div`
 export const NewRepoModal = styled.div`
   border: 1px solid rgba(240,246,252,0.1);
   background: ${Variables.DarkBtnColor};
+  box-shadow: 0 8px 24px #010409;
   width: 40%;
   border-radius: 6px;
   animation: ${animationModal} .5s forwards;
