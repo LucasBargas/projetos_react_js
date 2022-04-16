@@ -11,11 +11,6 @@ export const ProfileDatasArea = styled.div`
     position: static;
     order: 1;
   } 
-
-  textarea:focus {
-    border-color: ${Variables.BorderFocus};
-    box-shadow: 0px 0px 6px 0px ${Variables.BorderFocus};
-  }
 `;
 
 export const UserPhoto = styled.div`
@@ -139,12 +134,12 @@ export const Follows = styled.div`
 `;
 
 export const UpdateDatas = styled.form`
-  label, textarea {
+  label {
     display: block;
     width: 100%;
   }
 
-  label, textarea, p, strong {
+  label, p, strong {
     color: ${Variables.MainFontColor};
     font-size: .875rem;
   }
@@ -158,8 +153,6 @@ export const UpdateDatas = styled.form`
   }
 
   textarea {
-    height: 81px;
-    padding: 8px 12px;
     resize: vertical;
     overflow-y: auto;
   }

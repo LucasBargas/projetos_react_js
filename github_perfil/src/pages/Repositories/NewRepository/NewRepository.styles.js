@@ -81,13 +81,8 @@ export const FormRepo = styled.form`
     padding: .75rem;
   }
 
-  #nome {
-    height: 30px;
-  }
-
   #desc {
     overflow-y: auto;
-    height: 100px;
     resize: none;
   }
 `;

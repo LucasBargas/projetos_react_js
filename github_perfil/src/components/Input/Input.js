@@ -1,8 +1,8 @@
 import DefaultInput from './Input.styles';
 
-const Input = ({ placeholder, type, ...props }) => {
+const Input = ({ placeholder, ...props }) => {
   return (
-    <DefaultInput type={type} placeholder={placeholder} {...props} />
+    <DefaultInput placeholder={placeholder} {...props} />
   )
 }
 

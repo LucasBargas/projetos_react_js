@@ -9,6 +9,7 @@ import { RiBuildingLine } from 'react-icons/ri';
 import { IoPeopleOutline } from 'react-icons/io5';
 import { UserContext } from '../../../utils/UserContext';
 import Input from '../../../components/Input/Input';
+import Textarea from '../../../components/Textarea/Textarea';
 
 const ProfileDatas = () => {
   const { name, username, bio, website, setName, setUsername, setBio, setWebsite } = useContext(UserContext);
@@ -94,7 +95,7 @@ const ProfileDatas = () => {
         <Input type="text" id='userName' placeholder='Username' value={username} onChange={({ target }) => setUsername(target.value)} />
 
         <label htmlFor='bio'>Bio</label>
-        <textarea id='bio' placeholder='Add a bio' value={bio} onChange={({ target }) => setBio(target.value)} />
+        <Textarea height='81px' id='bio' placeholder='Add a bio' value={bio} onChange={({ target }) => setBio(target.value)} />
         <p>You can <strong>@mention</strong> other users and organizations to link to them.</p>
 
         <div>
