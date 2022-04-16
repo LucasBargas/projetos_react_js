@@ -12,7 +12,7 @@ const Profile = () => {
 
   return (
     <>
-      <Head title={name && username ? `${name}(${username})` : 'Lucas Bargas(LucasBargas)'} />
+      <Head title={name && username ? `${name} (${username})` : 'Lucas Bargas (LucasBargas)'} />
       <main>
         <Container>
           <ProfileArea>

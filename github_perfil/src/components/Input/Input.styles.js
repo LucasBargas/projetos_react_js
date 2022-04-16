@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as Variables from '../../styles/Variables';
 
 const DefaultInput = styled.input`
   display: block;
@@ -6,8 +7,8 @@ const DefaultInput = styled.input`
   width: 100%;
 
   &:focus {
-    border-color: #1158c7;
-    box-shadow: 0px 0px 6px 0px #1158c7;
+    border-color: ${Variables.BorderFocus};
+    box-shadow: 0px 0px 6px 0px ${Variables.BorderFocus};
   }
 `;
 

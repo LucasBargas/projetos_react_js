@@ -18,7 +18,7 @@ const Overview = () => {
 
   return (
     <>
-      <Head title={name && username ? `${name}(${username})` : 'Lucas Bargas(LucasBargas)'} />
+      <Head title={name && username ? `${name} (${username})` : 'Lucas Bargas (LucasBargas)'} />
       <S.OverviewContainer>
         <S.SmallText>
           <span>

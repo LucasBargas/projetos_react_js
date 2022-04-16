@@ -79,11 +79,17 @@ export const FormRepo = styled.form`
 
   input, textarea {
     padding: .75rem;
+
+    &:focus {
+      border-color: ${Variables.BorderFocus};
+      box-shadow: 0px 0px 6px 0px ${Variables.BorderFocus};
+    }
   }
 
   #desc {
     overflow-y: auto;
     resize: none;
+    height: 101px;
   }
 `;
 

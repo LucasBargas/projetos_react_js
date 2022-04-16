@@ -2,21 +2,19 @@ import { useEffect, useRef, useState } from 'react';
 import * as S from './NewRepository.styles';
 import { IoCloseSharp } from 'react-icons/io5';
 import repoList from '../RepositoriesList/repoList';
-import Input from '../../../components/Input/Input';
-import Textarea from '../../../components/Textarea/Textarea';
 
-const NewRepositorie = ({ setNewRepo }) => {
-  const inputRepoTitle = useRef();
-  const inputRepoDescription = useRef();
-  const selectType = useRef();
-  const selectLicense = useRef();
-  const selectLanguage = useRef();
-
+const NewRepository = ({ setNewRepo }) => {
   const [repoTitle, setRepoTitle] = useState(undefined);
   const [repoDescription, setRepoDescription] = useState(undefined);
   const [type, setType] = useState(undefined);
   const [license, setLicense] = useState(undefined);
   const [lang, setLang] = useState(undefined);
+
+  const inputRepoTitle = useRef();
+  const inputRepoDescription = useRef();
+  const selectType = useRef();
+  const selectLicense = useRef();
+  const selectLanguage = useRef();
 
   const setDatas = () => {
     setType(selectType.current.value);
@@ -64,8 +62,8 @@ const NewRepositorie = ({ setNewRepo }) => {
           <h2>Create a new repository</h2>
 
           <S.FormRepo onClick={(e) => e.preventDefault()}>
-            <Input ref={inputRepoTitle} type="text" placeholder='Set the Title...' />
-            <Textarea height='101px' ref={inputRepoDescription} id='desc' type="text" placeholder='Set the Description...' />
+            <input ref={inputRepoTitle} type="text" placeholder='Set the Title...' />
+            <textarea ref={inputRepoDescription} id='desc' type="text" placeholder='Set the Description...' />
 
             <S.SelectArea>
               <select ref={selectType} value={type}>
@@ -99,4 +97,4 @@ const NewRepositorie = ({ setNewRepo }) => {
   )
 }
 
-export default NewRepositorie;
+export default NewRepository;
