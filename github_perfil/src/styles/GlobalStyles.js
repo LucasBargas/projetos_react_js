@@ -15,6 +15,20 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    &::-webkit-scrollbar {
+      width: 16px;
+    }
+
+    &::-webkit-scrollbar-track {
+       background: #424242;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #686868;
+      border-left: 2px solid #424242;
+      border-right: 2px solid #424242;
+    }
+
     font-family: ${Variables.FontFamily};
     background: ${Variables.PrimaryBgColor};
     color: ${Variables.LightColor};
