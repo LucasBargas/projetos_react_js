@@ -2,14 +2,9 @@ import { useEffect, useState, useContext } from 'react';
 import * as S from './ProfileDatas.styles';
 import userPhoto from '../../../assets/images/user-photo.png';
 import { Link } from 'react-router-dom';
-import { FiMapPin } from 'react-icons/fi';
-import { BiLink } from 'react-icons/bi';
-import { BsTwitter } from 'react-icons/bs';
-import { RiBuildingLine } from 'react-icons/ri';
-import { IoPeopleOutline } from 'react-icons/io5';
 import { UserContext } from '../../../utils/UserContext';
-import Input from '../../../components/Input/Input';
-import Textarea from '../../../components/Textarea/Textarea';
+import ProfileDatasUser from './ProfileDatasUser/ProfileDatasUser';
+import ProfileUpdateDatas from './ProfileUpdateDatas/ProfileUpdateDatas';
 
 const ProfileDatas = () => {
   const { name, username, bio, website, setName, setUsername, setBio, setWebsite } = useContext(UserContext);
@@ -59,7 +54,7 @@ const ProfileDatas = () => {
     <S.ProfileDatasArea>
       <S.UserPhoto>
         <Link to='/'>
-          <img src={userPhoto} alt="" />
+          <img src={userPhoto} alt='User' />
         </Link>
         <div>
           {datasUser && (
@@ -71,51 +66,9 @@ const ProfileDatas = () => {
         </div>
       </S.UserPhoto>
 
-      {datasUser && <S.Datas>
-        {bio ? <p>{bio}</p> : <p>Sou um paixonado estudante Front End.</p>}
-        <button onClick={handleUpdateUser}>Edit Profile</button>
-        <S.Follows>
-          <a href="#follower"><IoPeopleOutline /> <strong>1</strong> follower</a>
-          <span> - </span>
-          <a href="#following"><strong>7</strong> following</a>
-        </S.Follows>
-        <ul>
-          {company && <li><RiBuildingLine /> {company}</li>}
-          {location ? <li><FiMapPin /> {location}</li> : <li><FiMapPin /> São Paulo, SP</li>}
-          {website ? <li><a href={website} target="_blank" rel="noopener noreferrer"><BiLink /> {website}</a></li> : <li><a href='https://projetoslucasbargas.com' target="_blank" rel="noopener noreferrer"><BiLink /> https://projetoslucasbargas.com/</a></li>}
-          {twitter && <li><a href={twitter}target="_blank" rel="noopener noreferrer"><BsTwitter />  @{twitter}</a></li>}
-        </ul>
-      </S.Datas>}
+      {datasUser && <ProfileDatasUser bio={bio} handleUpdateUser={handleUpdateUser} company={company} location={location} website={website} twitter={twitter} />}
 
-      {updateForm && <S.UpdateDatas onSubmit={handleSubmitUpdate}>
-        <label htmlFor='name'>Name</label>
-        <Input type="text" id='name' placeholder='Name' value={name} onChange={({ target }) => setName(target.value)} />
-
-        <label htmlFor='userName'>Username</label>
-        <Input type="text" id='userName' placeholder='Username' value={username} onChange={({ target }) => setUsername(target.value)} />
-
-        <label htmlFor='bio'>Bio</label>
-        <Textarea height='81px' id='bio' placeholder='Add a bio' value={bio} onChange={({ target }) => setBio(target.value)} />
-        <p>You can <strong>@mention</strong> other users and organizations to link to them.</p>
-
-        <div>
-          <span><RiBuildingLine /></span>
-          <Input type="text" placeholder='Company' value={company} onChange={({ target }) => setCompany(target.value)} />
-        </div>
-        <div>
-          <span><FiMapPin /></span>
-          <Input type="text" placeholder='Location' value={location} onChange={({ target }) => setLocation(target.value)} />
-        </div>
-        <div>
-          <span><BiLink /></span>
-          <Input type="text" placeholder='Website' value={website} onChange={({ target }) => setWebsite(target.value)} />
-        </div>
-        <div>
-          <span><BsTwitter /></span>
-          <Input type="text" placeholder='Twitter' value={twitter} onChange={({ target }) => setTwitter(target.value)} />
-        </div>
-        <button>Save</button>
-      </S.UpdateDatas> }
+      {updateForm && <ProfileUpdateDatas handleSubmitUpdate={handleSubmitUpdate} name={name} setName={setName} username={username} setUsername={setUsername} bio={bio} setBio={setBio} company={company} setCompany={setCompany} location={location} setLocation={setLocation} website={website} setWebsite={setWebsite} twitter={twitter} setTwitter={setTwitter} /> }
     </S.ProfileDatasArea>
   )
 }
