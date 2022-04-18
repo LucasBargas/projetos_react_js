@@ -44,12 +44,13 @@ export const FilterButtons = styled.div`
 export const Button = styled.div`
   position: relative;
 
-  span {
+  button {
     display: inline-block;
     cursor: pointer;
     font-size: .875rem;
     font-weight: 400;
     padding: 5px 16px;
+    color: ${Variables.MainFontColor};
     box-shadow: 0px 0px transparent, 0px 0px transparent;
     border: 1px solid rgba(240,246,252,0.1);
     background: ${Variables.DarkBtnColor};
@@ -134,6 +135,12 @@ export const CloseButtonSubmenu = styled.div`
     background: transparent;
     color: ${Variables.GrayColor};
     font-size: 1rem;
+    border: none;
+    padding: .25rem 0 0 .25rem;
+
+    &::after {
+      display: none;
+    }
 
     @media (max-width: 480px) {
       font-size: 1.25rem;

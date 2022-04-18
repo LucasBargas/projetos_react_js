@@ -26,7 +26,7 @@ export const Nav = styled.nav`
       width: 100%;
       max-width: 270px;
       height: 28px;
-      color: ${Variables.LightColor}; 
+      color: ${Variables.MainFontColor}; 
       transition: .4s;
 
       @media (max-width: 768px) {
@@ -44,7 +44,7 @@ export const Nav = styled.nav`
       }
 
       &::placeholder {
-        color: ${Variables.LightColor};
+        color: ${Variables.GrayColor};
       }
     }
 

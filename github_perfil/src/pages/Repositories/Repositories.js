@@ -58,7 +58,7 @@ const Repositories = () => {
 
           <S.FilterButtons>
             <S.Button className='filterButton type'>
-              <span onClick={handleOpenSubmenu}>Type</span>
+              <button onClick={handleOpenSubmenu}>Type</button>
 
               <Submenu show={typeButton} onClick={handleOutsideClick}>
                 <S.CloseButtonSubmenu>
@@ -74,7 +74,7 @@ const Repositories = () => {
             </S.Button>
 
             <S.Button className='filterButton language'>
-              <span onClick={handleOpenSubmenu}>Language</span>
+              <button onClick={handleOpenSubmenu}>Language</button>
               <Submenu show={languageButton} onClick={handleOutsideClick}>
                 <S.CloseButtonSubmenu>
                   <p>Select language</p>

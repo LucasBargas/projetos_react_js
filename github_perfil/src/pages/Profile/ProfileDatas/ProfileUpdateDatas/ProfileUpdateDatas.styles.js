@@ -4,7 +4,6 @@ import * as Variables from '../../../../styles/Variables';
 const UpdateDatas = styled.form`
   label {
     display: block;
-    width: 100%;
   }
 
   label, p, strong {
@@ -40,7 +39,7 @@ const UpdateDatas = styled.form`
   div {
     display: flex;
 
-    span {
+    label {
       font-size: 1rem;
       color: ${Variables.MainFontColor};
       position: relative;

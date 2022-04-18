@@ -20,20 +20,20 @@ const ProfileUpdateDatas = ({ handleSubmitUpdate, name, setName, username, setUs
       <p>You can <strong>@mention</strong> other users and organizations to link to them.</p>
 
       <div>
-        <span><RiBuildingLine /></span>
-        <Input type="text" placeholder='Company' value={company} onChange={({ target }) => setCompany(target.value)} />
+        <label htmlFor='company'><RiBuildingLine /></label>
+        <Input id='company' type="text" placeholder='Company' value={company} onChange={({ target }) => setCompany(target.value)} />
       </div>
       <div>
-        <span><FiMapPin /></span>
-        <Input type="text" placeholder='Location' value={location} onChange={({ target }) => setLocation(target.value)} />
+        <label htmlFor='location'><FiMapPin /></label>
+        <Input id='location' type="text" placeholder='Location' value={location} onChange={({ target }) => setLocation(target.value)} />
       </div>
       <div>
-        <span><BiLink /></span>
-        <Input type="text" placeholder='Website' value={website} onChange={({ target }) => setWebsite(target.value)} />
+        <label htmlFor='website'><BiLink /></label>
+        <Input id='website' type="text" placeholder='Website' value={website} onChange={({ target }) => setWebsite(target.value)} />
       </div>
       <div>
-        <span><BsTwitter /></span>
-        <Input type="text" placeholder='Twitter' value={twitter} onChange={({ target }) => setTwitter(target.value)} />
+        <label htmlFor='twitter'><BsTwitter /></label>
+        <Input id='twitter' type="text" placeholder='Twitter' value={twitter} onChange={({ target }) => setTwitter(target.value)} />
       </div>
       <button>Save</button>
     </UpdateDatas>
