@@ -18,9 +18,9 @@ const Repositories = () => {
   const [newRepo, setNewRepo] = useState(null);
 
   const submenuLinksArr = () => {
-    const submenuLangArr = [...submenuLang.current.children];
     const submenuTypeArr = [...submenuType.current.children];
-    return submenuLangArr.concat(submenuTypeArr);
+    const submenuLangArr = [...submenuLang.current.children];
+    return submenuTypeArr.concat(submenuLangArr);
   }
 
   const handleValueToFilter = ({ target }) => {
@@ -109,7 +109,7 @@ const Repositories = () => {
           </S.ButtonNewRepo>
         </S.SearchArea>
 
-        <RepositoriesList valueToFilter={valueToFilter} setValueToFilter={setValueToFilter} />
+        <RepositoriesList valueToFilter={valueToFilter} setValueToFilter={setValueToFilter} subMenuLinks={submenuLinksArr} />
 
         {newRepo && <NewRepository setNewRepo={setNewRepo} />}
       </S.RepoContainer>

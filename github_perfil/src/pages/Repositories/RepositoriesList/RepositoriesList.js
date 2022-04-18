@@ -4,8 +4,15 @@ import repoList from './repoList';
 import { IoCloseSharp } from 'react-icons/io5';
 import { GoLaw } from 'react-icons/go';
 
-const RepositoriesList = ({ valueToFilter, setValueToFilter }) => {
+const RepositoriesList = ({ valueToFilter, setValueToFilter, subMenuLinks }) => {
   const [resultLength, setResultLength] = useState(null);
+
+  const handleClearFilter = () => {
+    const setLink = subMenuLinks();
+    setLink.forEach(link => link.classList.remove('active'));
+    setLink[0].classList.add('active');
+    setValueToFilter('All');
+  }
 
   const repoListFilter = repoList.filter(repoFilter => 
     (repoFilter.type === valueToFilter || repoFilter.typeDefault === valueToFilter || repoFilter.lang === valueToFilter || repoFilter.langDefault === valueToFilter)
@@ -22,7 +29,7 @@ const RepositoriesList = ({ valueToFilter, setValueToFilter }) => {
           <S.ClearFilterMessage>
             <span><strong>{resultLength}</strong> results for <strong>{valueToFilter}</strong> repositories sorted by <strong>last updated</strong></span>
             
-            <S.ClearFilterBtn onClick={() => setValueToFilter('All')}>
+            <S.ClearFilterBtn onClick={handleClearFilter}>
               <button><IoCloseSharp /></button>
               Clear filter
             </S.ClearFilterBtn>
