@@ -2,19 +2,32 @@ import Head from '../../utils/Head';
 import * as S from './Repositories.styles';
 import { HiOutlineDesktopComputer } from 'react-icons/hi';
 import { IoCloseSharp } from 'react-icons/io5';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import RepositoriesList from './RepositoriesList/RepositoriesList';
 import NewRepository from './NewRepository/NewRepository';
 import Input from '../../components/Input/Input';
 import Submenu from '../../components/Submenu/Submenu';
 
 const Repositories = () => {
+  const submenuType = useRef();
+  const submenuLang = useRef();
+
   const [valueToFilter, setValueToFilter] = useState('All');
   const [typeButton, setTypeButton] = useState(false);
   const [languageButton, setLanguageButton] = useState(false);
   const [newRepo, setNewRepo] = useState(null);
 
+  const submenuLinksArr = () => {
+    const submenuLangArr = [...submenuLang.current.children];
+    const submenuTypeArr = [...submenuType.current.children];
+    return submenuLangArr.concat(submenuTypeArr);
+  }
+
   const handleValueToFilter = ({ target }) => {
+    const linksArr = submenuLinksArr();
+    linksArr.forEach(link => link.classList.remove('active'));
+    target.classList.add('active');
+
     setValueToFilter((target.innerText));
     setLanguageButton(false);
     setTypeButton(false);
@@ -65,8 +78,8 @@ const Repositories = () => {
                   <p>Select type</p>
                   <button onClick={() => closeSubMenu()}><IoCloseSharp /></button>
                 </S.CloseButtonSubmenu>
-                <ul>
-                  <li onClick={handleValueToFilter}>All</li>
+                <ul ref={submenuType}>
+                  <li className='active' onClick={handleValueToFilter}>All</li>
                   <li onClick={handleValueToFilter}>Public</li>
                   <li onClick={handleValueToFilter}>Private</li>
                 </ul>
@@ -80,7 +93,7 @@ const Repositories = () => {
                   <p>Select language</p>
                   <button onClick={() => closeSubMenu()}><IoCloseSharp /></button>
                 </S.CloseButtonSubmenu>
-                <ul>
+                <ul ref={submenuLang}>
                   <li onClick={handleValueToFilter}>All</li>
                   <li onClick={handleValueToFilter}>JavaScript</li>
                   <li onClick={handleValueToFilter}>HTML</li>

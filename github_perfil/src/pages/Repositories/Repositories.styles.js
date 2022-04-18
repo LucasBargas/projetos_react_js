@@ -58,6 +58,11 @@ export const Button = styled.div`
     display: flex;
     align-items: center;
 
+    &:hover, &:focus {
+      background: ${Variables.BorderColor};
+      border-color: rgba(240,246,252,0.4);
+    }
+
     &::after {
       content: '';
       margin-left: .5rem;
@@ -76,15 +81,31 @@ export const Button = styled.div`
 
   nav {
     li {
-      padding: 7px 7px 7px 1rem;
+      padding: 10px 7px 10px 2.25rem;
       cursor: pointer;
+      color: ${Variables.MainFontColor};
+      display: flex;
+      align-items: center;
 
       @media (max-width: 480px) {
-        padding: 1rem 7px 1rem 1rem;
+        padding: 1rem 7px 1rem 2.25rem;
       }
 
       &:not(:last-of-type) {
         border-bottom: 1px solid ${Variables.DarkBtnColor};
+      }
+
+      &:hover {
+        background: #1c2026;
+      }
+
+      &.active::before {
+        content: '✓';
+        left: 0;
+        position: absolute;
+        font-size: .75rem;
+        padding: 0 15px;
+        font-weight: 700;
       }
     }
   }
@@ -128,7 +149,7 @@ export const CloseButtonSubmenu = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 7px 7px 7px 16px;
+  padding: 10px 7px 10px 16px;
   border-bottom: 1px solid ${Variables.DarkBtnColor};
 
   button {
