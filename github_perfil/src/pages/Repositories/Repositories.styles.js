@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import * as Variables from '../../styles/Variables';
-import { animationModal } from './NewRepository/NewRepository.styles';
 
 export const RepoContainer = styled.section`
   color: ${Variables.MainFontColor};
@@ -73,6 +72,21 @@ export const Button = styled.div`
       top: 2px;
     }
   }
+
+  nav {
+    li {
+      padding: 7px 7px 7px 1rem;
+      cursor: pointer;
+
+      @media (max-width: 480px) {
+        padding: 1rem 7px 1rem 1rem;
+      }
+
+      &:not(:last-of-type) {
+        border-bottom: 1px solid ${Variables.DarkBtnColor};
+      }
+    }
+  }
 `;
 
 export const ButtonNewRepo = styled.div`
@@ -105,54 +119,6 @@ export const ButtonNewRepo = styled.div`
 
     svg {
       margin-right: 5px;
-    }
-  }
-`;
-
-export const ButtonSubmenuContainer = styled.div`
-  position: absolute;
-  right: 0;
-  width: 20vw;
-  display: ${({ show }) => show ? 'block' : 'none'};
-
-  @media (max-width: 480px) {
-    background: rgba(13,16,23,.9);
-    display: ${({ show }) => show ? 'flex' : 'none'};
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 500;
-    width: 100%;
-    height: 100vh;
-    padding: 1.5rem;
-  }
-`;
-
-export const ButtonSubmenu = styled.nav`
-  background: ${Variables.SecondaryBgColor};
-  margin-top: 7px;
-  box-shadow: 0 8px 24px #010409;
-  border: 1px solid rgba(240,246,252,0.1);
-  border-radius: 6px;
-  font-size: .75rem;
-
-  @media (max-width: 480px) {
-    width: 100%;
-    animation: ${animationModal} .4s forwards;
-  }
-
-  li {
-    padding: 7px 7px 7px 1rem;
-    cursor: pointer;
-
-    @media (max-width: 480px) {
-      padding: 1rem 7px 1rem 1rem;
-    }
-
-    &:not(:last-of-type) {
-      border-bottom: 1px solid ${Variables.DarkBtnColor};
     }
   }
 `;

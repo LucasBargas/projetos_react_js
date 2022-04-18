@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import RepositoriesList from './RepositoriesList/RepositoriesList';
 import NewRepository from './NewRepository/NewRepository';
 import Input from '../../components/Input/Input';
+import Submenu from '../../components/Submenu/Submenu';
 
 const Repositories = () => {
   const [valueToFilter, setValueToFilter] = useState('All');
@@ -58,38 +59,35 @@ const Repositories = () => {
           <S.FilterButtons>
             <S.Button className='filterButton type'>
               <span onClick={handleOpenSubmenu}>Type</span>
-              <S.ButtonSubmenuContainer show={typeButton} onClick={handleOutsideClick}>
-                <S.ButtonSubmenu>
-                  <S.CloseButtonSubmenu>
-                    <p>Select type</p>
-                    <button onClick={() => closeSubMenu()}><IoCloseSharp /></button>
-                  </S.CloseButtonSubmenu>
-                  <ul>
-                    <li onClick={handleValueToFilter}>All</li>
-                    <li onClick={handleValueToFilter}>Public</li>
-                    <li onClick={handleValueToFilter}>Private</li>
-                  </ul>
-                </S.ButtonSubmenu>
-              </S.ButtonSubmenuContainer>
+
+              <Submenu show={typeButton} onClick={handleOutsideClick}>
+                <S.CloseButtonSubmenu>
+                  <p>Select type</p>
+                  <button onClick={() => closeSubMenu()}><IoCloseSharp /></button>
+                </S.CloseButtonSubmenu>
+                <ul>
+                  <li onClick={handleValueToFilter}>All</li>
+                  <li onClick={handleValueToFilter}>Public</li>
+                  <li onClick={handleValueToFilter}>Private</li>
+                </ul>
+              </Submenu>
             </S.Button>
 
             <S.Button className='filterButton language'>
               <span onClick={handleOpenSubmenu}>Language</span>
-              <S.ButtonSubmenuContainer show={languageButton} onClick={handleOutsideClick}>
-                <S.ButtonSubmenu>
-                  <S.CloseButtonSubmenu>
-                    <p>Select language</p>
-                    <button onClick={() => closeSubMenu()}><IoCloseSharp /></button>
-                  </S.CloseButtonSubmenu>
-                  <ul>
-                    <li onClick={handleValueToFilter}>All</li>
-                    <li onClick={handleValueToFilter}>JavaScript</li>
-                    <li onClick={handleValueToFilter}>HTML</li>
-                    <li onClick={handleValueToFilter}>Sass</li>
-                    <li onClick={handleValueToFilter}>CSS</li>
-                  </ul>
-                </S.ButtonSubmenu>
-              </S.ButtonSubmenuContainer>
+              <Submenu show={languageButton} onClick={handleOutsideClick}>
+                <S.CloseButtonSubmenu>
+                  <p>Select language</p>
+                  <button onClick={() => closeSubMenu()}><IoCloseSharp /></button>
+                </S.CloseButtonSubmenu>
+                <ul>
+                  <li onClick={handleValueToFilter}>All</li>
+                  <li onClick={handleValueToFilter}>JavaScript</li>
+                  <li onClick={handleValueToFilter}>HTML</li>
+                  <li onClick={handleValueToFilter}>Sass</li>
+                  <li onClick={handleValueToFilter}>CSS</li>
+                </ul>
+              </Submenu>
             </S.Button>
           </S.FilterButtons>
 
