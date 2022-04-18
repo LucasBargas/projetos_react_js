@@ -31,7 +31,9 @@ export const ClearFilterMessage = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   font-size: .875rem;
+  gap: 1rem;
   padding: 1.25rem 0 !important;
 
   strong {
