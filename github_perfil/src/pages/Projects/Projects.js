@@ -1,12 +1,13 @@
 import Head from '../../utils/Head';
+import ProjectsNav from './ProjectsNav/ProjectsNav';
 
 const Projects = () => {
   return (
     <>
       <Head title='Your Projects' />
-      <div>
-        Projects
-      </div>
+      <section>
+        <ProjectsNav />
+      </section>
     </>
   )
 }

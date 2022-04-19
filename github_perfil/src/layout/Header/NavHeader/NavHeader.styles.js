@@ -27,7 +27,7 @@ export const Nav = styled.nav`
       max-width: 270px;
       height: 28px;
       color: ${Variables.MainFontColor}; 
-      transition: .4s;
+      transition: .2s;
 
       @media (max-width: 768px) {
         max-width: none;
@@ -36,7 +36,8 @@ export const Nav = styled.nav`
 
       &:focus {
         max-width: 518px;
-        border-color: ${Variables.LinkColor};
+        border: 2px solid ${Variables.LinkColor};
+        background: ${Variables.SecondaryBgColor};
 
         @media (max-width: 768px) {
           max-width: 100%;

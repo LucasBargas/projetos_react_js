@@ -16,7 +16,7 @@ const showSubmenu = keyframes`
 export const ButtonSubmenuContainer = styled.div`
   position: absolute;
   right: 0;
-  width: 20vw;
+  width: ${({ width }) => (width ? width : '20vw')};
   display: ${({ show }) => show ? 'block' : 'none'};
 
   @media (max-width: 480px) {
