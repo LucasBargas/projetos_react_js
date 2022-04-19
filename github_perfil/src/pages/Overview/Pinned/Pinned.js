@@ -58,6 +58,19 @@ const Pinned = () => {
             <p>JavaScript</p>
           </S.Indicator>
         </S.PinnedRepoCard>
+
+        <S.PinnedRepoCard>
+          <S.RepoTitle>
+            <HiOutlineDesktopComputer />
+            <a href="#repo" title='projetos_curso_js_b7web'>projetos_curso_js_b7web</a>
+            <span>Public</span>
+          </S.RepoTitle>
+          <p>Projetos desenvolvidos durante o curso de JavaScript da B7Web sob tutela do professor, Bonieky Lacerda.</p>   
+          <S.Indicator>
+            <span className='js'></span>
+            <p>JavaScript</p>
+          </S.Indicator>
+        </S.PinnedRepoCard>
       </S.PinnedRepos>
     </S.PinnedContainer>
   )
