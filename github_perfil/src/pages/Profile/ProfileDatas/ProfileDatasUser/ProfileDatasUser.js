@@ -19,7 +19,7 @@ const ProfileDatasUser = ({ bio, handleUpdateUser, company, location, website, t
         {company && <li><RiBuildingLine /> {company}</li>}
         {location ? <li><FiMapPin /> {location}</li> : <li><FiMapPin /> São Paulo, SP</li>}
         {website ? <li><a href={website} target="_blank" rel="noopener noreferrer"><BiLink /> {website}</a></li> : <li><a href='https://projetoslucasbargas.com' target="_blank" rel="noopener noreferrer"><BiLink /> https://projetoslucasbargas.com/</a></li>}
-        {twitter && <li><a href={twitter}target="_blank" rel="noopener noreferrer"><BsTwitter />  @{twitter}</a></li>}
+        {twitter && <li><a href={`https://twitter.com/${twitter}`} target="_blank" rel="noopener noreferrer"><BsTwitter />  @{twitter}</a></li>}
       </ul>
     </S.Datas>
   )
