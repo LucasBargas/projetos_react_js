@@ -6,6 +6,7 @@ import Repositories from '../../Repositories/Repositories';
 import Projects from '../../Projects/Projects';
 import Packages from '../../Packages/Packages';
 import Stars from '../../Stars/Stars';
+import NotFound from '../../NotFound/NotFound';
 
 const ProfilePages = () => {
   return (
@@ -16,6 +17,7 @@ const ProfilePages = () => {
         <Route path='projects' element={<Projects />} />
         <Route path='packages' element={<Packages />} />
         <Route path='stars' element={<Stars />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </S.ProfilePagesArea>
   )
