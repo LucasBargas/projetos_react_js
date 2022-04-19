@@ -42,7 +42,7 @@ const InternalNav = ({ userPhotoRef }) => {
             <figure>
               <img src={userPhoto} alt="user" />
             </figure>
-            {username}
+            {username ? username : 'LucasBargas'}
           </S.InternalNavUser>
 
           <ul>
