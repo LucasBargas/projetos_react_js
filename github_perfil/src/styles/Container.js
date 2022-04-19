@@ -10,8 +10,8 @@ const Container = styled.div`
     max-width: 1240px;
   }
 
-  @media (max-width: 414px) {
-    padding: 0 1.5rem;
+  @media (max-width: 360px) {
+    padding: 0 1.15rem;
   }
 `;
 
