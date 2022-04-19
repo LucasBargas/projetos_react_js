@@ -6,26 +6,30 @@ import { BiSearch } from 'react-icons/bi';
 import Submenu from '../../../components/Submenu/Submenu';
 import BetaFlag from '../../../components/BetaFlag/BetaFlag';
 
-const ProjectsNav = () => {
+const ProjectsNav = ({ projectsBeta, setProjectsBeta, projects, setProjects, open, closed, setOpen, setClosed }) => {
   const input = useRef();
-  const [projectsBeta, setProjectsBeta] = useState(true);
-  const [projects, setProjects] = useState(false);
   const [showSubmenu, setShowSubmenu] = useState(false);
 
   const handleProjectsBetaClick = () => {
     setProjectsBeta(true);
     setProjects(false);
+    setOpen(true);
+    setClosed(false);
   }
 
   const handleProjectsClick = () => {
     setProjectsBeta(false);
     setProjects(true);
+    setOpen(false);
+    setClosed(false);
   }
 
   useEffect(() => {
     if (projectsBeta) input.current.value = 'is:open ';
     if (projects) input.current.value = 'is:open sort:created-desc ';
-  }, [projectsBeta, projects]);
+    if (open) input.current.value = 'is:open ';
+    if (closed) input.current.value = 'is:closed ';
+  }, [projectsBeta, projects, open, closed]);
 
   useEffect(() => {
     const handleDocClick = ({ target }) => {
@@ -62,7 +66,7 @@ const ProjectsNav = () => {
 
       <S.ButtonNewProject id='btnNewProject'>
         <button onClick={() => setShowSubmenu(!showSubmenu)}>
-          New Project
+          New project
         </button>
 
         <Submenu show={showSubmenu} width='22vw'>

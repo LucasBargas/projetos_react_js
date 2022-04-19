@@ -2,9 +2,8 @@ import styled, { css } from 'styled-components';
 import * as Variables from '../../../styles/Variables';
 
 export const InternalNavContainer = styled.section`
-  background: ${Variables.PrimaryBgColor};
-  border-bottom: 1px solid ${Variables.BorderColor};
   grid-column: 1 / 5;
+  border-bottom: 1px solid ${Variables.BorderColor};
   display: flex;
 
   @media (max-width: 768px) {
@@ -16,10 +15,11 @@ export const InternalNavContainer = styled.section`
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 600;
   `}
 
   ${({ showUser }) => showUser && css`
-    z-index: 500;
+    background: ${Variables.PrimaryBgColor};
   `}
 
   @media (max-width: 768px) {
@@ -42,10 +42,13 @@ export const InternalNavContainer = styled.section`
     }
 
     ul {
+      background: ${Variables.PrimaryBgColor};
       display: flex;
       grid-column: 2 / 5;
       grid-row: 1 / 2;
       overflow-x: auto;
+      position: relative;
+      z-index: 500;
 
       @media (max-width: 1024px) {
         width: 70%;
@@ -53,6 +56,10 @@ export const InternalNavContainer = styled.section`
 
       @media (max-width: 820px) {
         width: 65%;
+      }
+
+      @media (max-width: 768px) {
+        background: ${Variables.SecondaryBgColor};
       }
 
       @media (max-width: 480px) {

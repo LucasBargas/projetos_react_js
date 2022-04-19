@@ -8,6 +8,7 @@ export const ProjectsNavContainer = styled.nav`
   gap: .5rem;
   align-items: center;
   color: ${Variables.MainFontColor};
+  margin-bottom: 1rem;
 
   @media (max-width: 1024px) {
     grid-template-columns: repeat(4, 1fr);
