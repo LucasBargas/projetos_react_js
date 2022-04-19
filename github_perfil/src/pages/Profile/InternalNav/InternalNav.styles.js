@@ -1,11 +1,26 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import * as Variables from '../../../styles/Variables';
 
 export const InternalNavContainer = styled.section`
+  background: ${Variables.PrimaryBgColor};
   border-bottom: 1px solid ${Variables.BorderColor};
   grid-column: 1 / 5;
   display: flex;
-  justify-content: flex-end;
+
+  @media (max-width: 768px) {
+    background: ${Variables.SecondaryBgColor};
+  }
+  
+  ${({ fixed }) => fixed && css`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  `}
+
+  ${({ showUser }) => showUser && css`
+    z-index: 500;
+  `}
 
   @media (max-width: 768px) {
     grid-column: 1 / 4;
@@ -17,25 +32,37 @@ export const InternalNavContainer = styled.section`
   }
 
   nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
     font-size: .875rem;
-    width: 72%;
-    overflow-x: auto;
 
     @media (max-width: 1024px) {
-      width: 65%;
-    }
-
-    @media (max-width: 480px) {
-      width: 100%;
+      display: flex;
     }
 
     ul {
       display: flex;
+      grid-column: 2 / 5;
+      grid-row: 1 / 2;
+      overflow-x: auto;
+
+      @media (max-width: 1024px) {
+        width: 70%;
+      }
+
+      @media (max-width: 820px) {
+        width: 65%;
+      }
+
+      @media (max-width: 480px) {
+        width: 100%;
+      }
 
       a {
         display: flex;
         align-items: center;
-        padding: 8px 16px 16px 16px;
+        padding: 1rem;
         border-bottom: 2px solid transparent;
         color: ${Variables.MainFontColor};
 
@@ -60,6 +87,45 @@ export const InternalNavContainer = styled.section`
           color: #f0f0f0;
         }
       }
+    }
+  }
+`;
+
+export const InternalNavUser = styled.div`
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: flex;
+  align-items: center;
+  font-size: .875rem;
+  color: ${Variables.MainFontColor};
+  opacity: 0;
+  visibility: hidden;
+  transition: .4s;
+
+  ${({ showUser }) => showUser && css`
+    opacity: 1;
+    visibility: visible;
+  `}
+
+  @media (max-width: 1024px) {
+    width: 35%;
+  }
+
+  @media (max-width: 820px) {
+    width: 40%;
+  }
+
+  @media (max-width: 480px) {
+    display: none;
+  }
+
+  figure {
+    margin-right: .5rem;
+
+    img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
     }
   }
 `;

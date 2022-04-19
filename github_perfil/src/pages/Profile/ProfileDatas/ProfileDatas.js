@@ -1,7 +1,6 @@
 import { useEffect, useState, useContext } from 'react';
 import * as S from './ProfileDatas.styles';
 import userPhoto from '../../../assets/images/user-photo.png';
-import { Link } from 'react-router-dom';
 import { UserContext } from '../../../utils/UserContext';
 import ProfileDatasUser from './ProfileDatasUser/ProfileDatasUser';
 import ProfileUpdateDatas from './ProfileUpdateDatas/ProfileUpdateDatas';
@@ -53,9 +52,7 @@ const ProfileDatas = () => {
   return (
     <S.ProfileDatasArea>
       <S.UserPhoto>
-        <Link to='/'>
-          <img src={userPhoto} alt='User' />
-        </Link>
+        <img id='photoUser' src={userPhoto} alt='User' />
         <div>
           {datasUser && (
             <>

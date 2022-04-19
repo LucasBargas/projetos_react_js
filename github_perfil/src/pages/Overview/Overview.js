@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Head from '../../utils/Head';
 import * as S from './Overview.styles';
@@ -11,7 +12,6 @@ import linkedin from '../../assets/images/medias/linkedin.svg';
 import whatsapp from '../../assets/images/medias/whatsapp.svg';
 import Pinned from './Pinned/Pinned';
 import { UserContext } from '../../utils/UserContext';
-import { useContext } from 'react';
 
 const Overview = () => {
   const { name, username, bio, website } = useContext(UserContext);
