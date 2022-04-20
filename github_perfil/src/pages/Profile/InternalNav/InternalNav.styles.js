@@ -137,7 +137,7 @@ export const InternalNavUser = styled.div`
   }
 `;
 
-export const RepositoriesLength = styled.span`
+export const FlagLength = styled.span`
   padding: 0 6px;
   font-size: .75rem !important;
   font-weight: 500;

@@ -56,7 +56,7 @@ const InternalNav = ({ userPhotoRef }) => {
             <li>
               <NavLink to='repositories'>
                 <span><HiOutlineDesktopComputer /></span> 
-                Repositories <S.RepositoriesLength>{repoList.length}</S.RepositoriesLength>
+                Repositories <S.FlagLength>{repoList.length}</S.FlagLength>
               </NavLink>
             </li>
 
@@ -77,7 +77,7 @@ const InternalNav = ({ userPhotoRef }) => {
             <li>
               <NavLink to='stars'>
                 <span><BsStar /></span>
-                Stars
+                Stars <S.FlagLength>1</S.FlagLength>
               </NavLink>
             </li>
           </ul>

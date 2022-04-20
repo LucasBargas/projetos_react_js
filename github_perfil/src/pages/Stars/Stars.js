@@ -1,12 +1,14 @@
 import Head from '../../utils/Head';
+import * as S from './Stars.styles';
+// import Submenu from '../../components/Submenu/Submenu';
 
 const Stars = () => {
   return (
     <>
       <Head title='Your Stars' />
-      <div>
-        Stars
-      </div>
+      <S.StarsContainer>
+        <p>Olá</p>
+      </S.StarsContainer>
     </>
   )
 }
