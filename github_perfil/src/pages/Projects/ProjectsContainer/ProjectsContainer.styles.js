@@ -139,6 +139,11 @@ export const ProjectsListContent = styled.div`
     font-weight: 500;
     border-radius: 6px;
     padding: 7px 1rem;
+    transition: .2s;
+
+    &:hover {
+      background: ${Variables.GreenColorHover};
+    }
   }
 
   a:last-of-type {
