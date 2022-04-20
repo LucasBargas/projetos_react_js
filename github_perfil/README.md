@@ -6,7 +6,8 @@ Escolhi praticar o que aprendi recentemente em ReactJS em uma aplicação um pou
 
 ### Informações sobre a aplicação
 * Layout encontrado na web; 
-* Soluções do ReactJS utilizadas: 
+* Soluções do ReactJS utilizadas:
+  * *React-Router-Dom*;  
   * *useState*;
   * *useEffect*;
   * *useContext*;
