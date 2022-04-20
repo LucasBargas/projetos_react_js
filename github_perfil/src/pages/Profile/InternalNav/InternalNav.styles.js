@@ -5,7 +5,7 @@ export const InternalNavContainer = styled.section`
   grid-column: 1 / 5;
   border-bottom: 1px solid ${Variables.BorderColor};
   display: flex;
-
+  
   @media (max-width: 768px) {
     background: ${Variables.SecondaryBgColor};
   }
@@ -57,7 +57,7 @@ export const InternalNavContainer = styled.section`
       @media (max-width: 820px) {
         width: 65%;
       }
-
+      
       @media (max-width: 768px) {
         background: ${Variables.SecondaryBgColor};
       }
@@ -117,7 +117,7 @@ export const InternalNavUser = styled.div`
   @media (max-width: 1024px) {
     width: 35%;
   }
-
+  
   @media (max-width: 820px) {
     width: 40%;
   }
