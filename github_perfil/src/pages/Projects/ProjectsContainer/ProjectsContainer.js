@@ -55,7 +55,7 @@ const ProjectsContainer = ({ projectsBeta, projects, open, setOpen, closed, setC
           <S.ProjectsListContent>
             <h2>You don't have any projects yet.</h2>
             <a href="#new-project">New project</a>
-            <a href="learn-more">Learn More</a>
+            <a href="#learn-more">Learn More</a>
           </S.ProjectsListContent>
         </S.ProjectsList>
       )}
