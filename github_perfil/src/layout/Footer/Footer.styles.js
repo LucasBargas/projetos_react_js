@@ -53,6 +53,10 @@ export const FooterNav = styled.nav`
       gap: 1.25rem;
     }
 
+    @media (max-width: 480px) {
+      gap: 1rem;
+    }
+
     a {
       color: ${Variables.LinkColor};
 
