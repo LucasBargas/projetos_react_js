@@ -22,7 +22,7 @@ const Modal = () => {
           </button>
         </S.ButtonClose>
         <S.ModalContent>
-          <h2>Lucas Bargas - Github Profile</h2>
+          <h2>Lucas Bargas - Github Perfil</h2>
           <p><strong>Nota:</strong> Este projeto é uma réplica desenvolvida por <a href="https://projetoslucasbargas.com/" target="_blank" rel="noopener noreferrer">Lucas Bargas</a> com base em sua página de <strong>Perfil</strong> do <a href="https://github.com/LucasBargas" target="_blank" rel="noopener noreferrer">Github</a>, para fins apenas estudantis. Toda a codificação é própria.</p>
 
           <S.LinkToGithub href="https://github.com/LucasBargas/projetos_react_js/tree/main/github_perfil" target="_blank" rel="noopener noreferrer">Clique aqui para visualizar o Repositório no GitHub</S.LinkToGithub>
