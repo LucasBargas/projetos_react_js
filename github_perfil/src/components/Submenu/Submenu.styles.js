@@ -1,6 +1,5 @@
 import styled, { keyframes } from 'styled-components';
 import * as Variables from '../../styles/Variables';
-import { animationModal } from '../../pages/Repositories/NewRepository/NewRepository.styles';
 
 const showSubmenu = keyframes`
   from {
@@ -10,6 +9,17 @@ const showSubmenu = keyframes`
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
+`;
+
+const animationModal = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(0, -50px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: initial;
   }
 `;
 

@@ -4,18 +4,18 @@ import { HiOutlineDesktopComputer } from 'react-icons/hi';
 import { IoCloseSharp } from 'react-icons/io5';
 import { useEffect, useState, useRef } from 'react';
 import RepositoriesList from './RepositoriesList/RepositoriesList';
-import NewRepository from './NewRepository/NewRepository';
 import Input from '../../components/Input/Input';
 import Submenu from '../../components/Submenu/Submenu';
 
 const Repositories = () => {
   const submenuType = useRef();
   const submenuLang = useRef();
+  const input = useRef();
 
+  const [inputFilter, setInputFilter] = useState('');
   const [valueToFilter, setValueToFilter] = useState('All');
   const [typeButton, setTypeButton] = useState(false);
   const [languageButton, setLanguageButton] = useState(false);
-  const [newRepo, setNewRepo] = useState(null);
 
   const submenuLinksArr = () => {
     const submenuTypeArr = [...submenuType.current.children];
@@ -62,13 +62,16 @@ const Repositories = () => {
     if (target === currentTarget) closeSubMenu();
   }
 
+  useEffect(() => {
+    input.current.focus();
+  }, []);
+
   return (
     <>
       <Head title='Your Repositories' />
       <S.RepoContainer>
         <S.SearchArea>
-          <Input type="text" placeholder='Find a repository...' />
-
+          <Input input={input} type="text" placeholder='Find a repository...' value={inputFilter} onChange={({ target }) => setInputFilter(target.value)} />
           <S.FilterButtons>
             <S.Button className='filterButton type'>
               <button onClick={handleOpenSubmenu}>Type</button>
@@ -105,13 +108,11 @@ const Repositories = () => {
           </S.FilterButtons>
 
           <S.ButtonNewRepo>
-            <button onClick={() => setNewRepo(true)}><HiOutlineDesktopComputer /> New</button>
+            <button><HiOutlineDesktopComputer /> New</button>
           </S.ButtonNewRepo>
         </S.SearchArea>
 
-        <RepositoriesList valueToFilter={valueToFilter} setValueToFilter={setValueToFilter} subMenuLinks={submenuLinksArr} />
-
-        {newRepo && <NewRepository setNewRepo={setNewRepo} />}
+        <RepositoriesList valueToFilter={valueToFilter} setValueToFilter={setValueToFilter} subMenuLinks={submenuLinksArr} inputFilter={inputFilter} />
       </S.RepoContainer>
     </>
   )

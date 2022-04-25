@@ -4,7 +4,7 @@ import repoList from './repoList';
 import { IoCloseSharp } from 'react-icons/io5';
 import { GoLaw } from 'react-icons/go';
 
-const RepositoriesList = ({ valueToFilter, setValueToFilter, subMenuLinks }) => {
+const RepositoriesList = ({ valueToFilter, setValueToFilter, subMenuLinks, inputFilter }) => {
   const [resultLength, setResultLength] = useState(null);
 
   const handleClearFilter = () => {
@@ -14,13 +14,19 @@ const RepositoriesList = ({ valueToFilter, setValueToFilter, subMenuLinks }) => 
     setValueToFilter('All');
   }
 
-  const repoListFilter = repoList.filter(repoFilter => 
-    (repoFilter.type === valueToFilter || repoFilter.typeDefault === valueToFilter || repoFilter.lang === valueToFilter || repoFilter.langDefault === valueToFilter)
-  );
+  const repoListFilter = repoList.filter(repoFilter => {
+    return (repoFilter.repoTitle.toLowerCase().includes(inputFilter.toLowerCase()) || repoFilter.repoDescription.toLowerCase().includes(inputFilter.toLowerCase()) || repoFilter.type.toLowerCase().includes(inputFilter.toLowerCase()) || repoFilter.lang.toLowerCase().includes(inputFilter.toLowerCase())) && (repoFilter.type === valueToFilter || repoFilter.typeDefault === valueToFilter || repoFilter.lang === valueToFilter || repoFilter.langDefault === valueToFilter);
+  });
 
   useEffect(() => {
     setResultLength(repoListFilter.length);
   }, [repoListFilter.length]);
+
+  useEffect(() => {
+    if (inputFilter === '') {
+      setValueToFilter('All');
+    }
+  }, [inputFilter, setValueToFilter])
 
   return (
     <S.RepoListArea>
@@ -35,7 +41,7 @@ const RepositoriesList = ({ valueToFilter, setValueToFilter, subMenuLinks }) => 
             </S.ClearFilterBtn>
           </S.ClearFilterMessage>
         )}
-        { valueToFilter && (
+        {(valueToFilter || inputFilter) && (
           repoListFilter.map((repoMap) => (
             <li key={repoMap.repoTitle}>
               <S.RepoTitle>
