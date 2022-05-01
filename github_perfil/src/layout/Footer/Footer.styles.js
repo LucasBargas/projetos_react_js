@@ -1,13 +1,16 @@
 import styled from "styled-components";
 
 export const FooterArea = styled.div`
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
   border-top: 1px solid ${({ theme }) => theme.colors.BorderColor};
   font-size: .75rem;
   padding: 40px 0;
   margin-top: 20px;
+`;
+
+export const FooterTop = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 
   @media (max-width: 820px) {
     flex-direction: column-reverse;
@@ -62,6 +65,24 @@ export const FooterNav = styled.nav`
       &:hover {
         text-decoration: underline;
       }
+    }
+  }
+`;
+
+export const FooterBottom = styled.div`
+  padding-top: 1rem;
+
+  @media (max-width: 820px) {
+    padding-top: .5rem;
+    text-align: center;
+  }
+
+  p {
+    color: ${({ theme }) => theme.colors.GrayColor};
+    
+    a {
+      color: ${({ theme }) => theme.colors.LinkColor};
+      font-weight: 700;
     }
   }
 `;
