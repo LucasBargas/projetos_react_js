@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import * as Variables from '../../../styles/Variables';
 
 export const StarHeaderButtons = styled.ul`
   display: flex;
@@ -8,7 +7,7 @@ export const StarHeaderButtons = styled.ul`
 
   .btnOpenSubmenu {
     padding: 7px 1rem;
-    color: ${Variables.MainFontColor};
+    color: ${({ theme }) => theme.colors.MainFontColor};
     border: 1px solid rgba(240,246,252,0.1);
     border-radius: 6px;
     font-size: .875rem;
@@ -20,10 +19,10 @@ export const StarHeaderButtons = styled.ul`
 
 export const CreateListButton = styled.li`
   button {
-    background: ${Variables.GreenColor};
+    background: ${({ theme }) => theme.colors.GreenColor};
 
     &:hover {
-      background: ${Variables.GreenColorHover};
+      background: ${({ theme }) => theme.colors.GreenColorHover};
     }
   }
 `;
@@ -34,10 +33,10 @@ export const SortButton = styled.li`
   .sortBtn {
     display: flex;
     align-items: center;
-    background: ${Variables.DarkBtnColor};
+    background: ${({ theme }) => theme.colors.DarkBtnColor};
 
     &:hover, &:focus {
-      background: ${Variables.BorderColor};
+      background: ${({ theme }) => theme.colors.BorderColor};
       border-color: rgba(240,246,252,0.4);
     }
 
@@ -49,13 +48,13 @@ export const SortButton = styled.li`
       height: 0;
       border-left: 4px solid transparent;
       border-right: 4px solid transparent;
-      border-bottom: 4px solid ${Variables.MainFontColor};
+      border-bottom: 4px solid ${({ theme }) => theme.colors.MainFontColor};
       transform: rotate(180deg);
     }
   }
 
   li:not(:last-of-type) {
-    border-bottom: 1px solid ${Variables.DarkBtnColor};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.MainFontColor};
   }
 
   li:not(:first-of-type) {

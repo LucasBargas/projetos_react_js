@@ -1,5 +1,4 @@
 import styled, { keyframes } from 'styled-components';
-import * as Variables from '../../../styles/Variables';
 
 const animateProjectsList = keyframes`
   from {
@@ -124,7 +123,7 @@ export const ProjectsListContent = styled.div`
   align-items: center;
   padding: 2rem;
   text-align: center;
-  color: ${Variables.MainFontColor};
+  color: ${({ theme }) => theme.colors.MainFontColor};
 
   h2 {
     font-weight: 500;
@@ -132,7 +131,7 @@ export const ProjectsListContent = styled.div`
 
   a:first-of-type {
     display: inline-block;
-    background: ${Variables.GreenColor};
+    background: ${({ theme }) => theme.colors.GreenColor};
     color: ${({ theme }) => theme.colors.LightColor};
     margin: 1.5rem 0 1rem 0;
     font-size: .875rem;
@@ -142,7 +141,7 @@ export const ProjectsListContent = styled.div`
     transition: .2s;
 
     &:hover {
-      background: ${Variables.GreenColorHover};
+      background: ${({ theme }) => theme.colors.GreenColorHover};
     }
   }
 
