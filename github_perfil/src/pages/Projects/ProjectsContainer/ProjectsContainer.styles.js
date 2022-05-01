@@ -19,19 +19,19 @@ export const ProjectsListClear = styled.div`
     display: flex;
     align-items: center;
     cursor: pointer;
-    color: ${Variables.GrayColor};
+    color: ${({ theme }) => theme.colors.GrayColor};
 
     &:hover {
-      color: ${Variables.LinkColor};
+      color: ${({ theme }) => theme.colors.LinkColor};
 
       button {
-        background: ${Variables.LinkColor};
+        background: ${({ theme }) => theme.colors.LinkColor};
       }
     }
 
     button {
-      background: ${Variables.GrayColor};
-      color: ${Variables.LightColor};
+      background: ${({ theme }) => theme.colors.GrayColor};
+      color: ${({ theme }) => theme.colors.LightColor};
       width: 18px;
       height: 18px;
       padding: 1px;
@@ -43,14 +43,14 @@ export const ProjectsListClear = styled.div`
 `;
 
 export const ProjectsList = styled.div`
-  border: 1px solid ${Variables.BorderColor};
+  border: 1px solid ${({ theme }) => theme.colors.BorderColor};
   border-radius: 6px;
   animation: ${animateProjectsList} .4s forwards;
 `;
 
 export const ProjectsListHeader = styled.header`
-  border: 1px solid ${Variables.BorderColor};
-  background: ${Variables.SecondaryBgColor};
+  border: 1px solid ${({ theme }) => theme.colors.BorderColor};
+  background: ${({ theme }) => theme.colors.SecondaryBgColor};
   padding: 1rem;
   font-size: .875rem;
 
@@ -75,20 +75,20 @@ export const ProjectsListHeader = styled.header`
 
         &:first-of-type {
           a {
-            color: ${({ open }) => (open ? Variables.LightColor : Variables.GrayColor)};
+            color: ${({ open }) => (open ? ({ theme }) => theme.colors.LightColor : ({ theme }) => theme.colors.GrayColor)};
           }
         }
 
         &:last-of-type {
           a {
-            color: ${({ closed }) => (closed ? Variables.LightColor : Variables.GrayColor)};
+            color: ${({ closed }) => (closed ? ({ theme }) => theme.colors.LightColor : ({ theme }) => theme.colors.GrayColor)};
           }
         }
       }
     }
 
     span {
-      color: ${Variables.GrayColor};
+      color: ${({ theme }) => theme.colors.GrayColor};
       display: flex;
       align-items: center;
       position: relative;
@@ -102,16 +102,16 @@ export const ProjectsListHeader = styled.header`
         height: 0;
         border-left: 4px solid transparent;
         border-right: 4px solid transparent;
-        border-bottom: 4px solid ${Variables.GrayColor};
+        border-bottom: 4px solid ${({ theme }) => theme.colors.GrayColor};
         transform: rotate(180deg);
         cursor: pointer;
       }
 
       &:hover {
-        color: ${Variables.LightColor};
+        color: ${({ theme }) => theme.colors.LightColor};
 
         &::after {
-          border-bottom: 4px solid ${Variables.LightColor};
+          border-bottom: 4px solid ${({ theme }) => theme.colors.LightColor};
         }
       }
     }
@@ -133,7 +133,7 @@ export const ProjectsListContent = styled.div`
   a:first-of-type {
     display: inline-block;
     background: ${Variables.GreenColor};
-    color: ${Variables.LightColor};
+    color: ${({ theme }) => theme.colors.LightColor};
     margin: 1.5rem 0 1rem 0;
     font-size: .875rem;
     font-weight: 500;
@@ -147,7 +147,7 @@ export const ProjectsListContent = styled.div`
   }
 
   a:last-of-type {
-    color: ${Variables.LinkColor};
+    color: ${({ theme }) => theme.colors.LinkColor};
     font-size: .875rem;
 
     &:hover {

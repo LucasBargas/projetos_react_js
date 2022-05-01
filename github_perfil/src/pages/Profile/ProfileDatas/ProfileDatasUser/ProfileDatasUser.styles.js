@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import * as Variables from '../../../../styles/Variables';
 
 export const Datas = styled.div`
   p, a, li, button, span, strong, svg {
-    color: ${Variables.MainFontColor};
+    color: ${({ theme }) => theme.colors.MainFontColor};
   }
 
   p {
@@ -19,12 +18,12 @@ export const Datas = styled.div`
     font-weight: 500;
     box-shadow: 0px 0px transparent, 0px 0px transparent;
     border: 1px solid rgba(240,246,252,0.1);
-    background: ${Variables.DarkBtnColor};
+    background: ${({ theme }) => theme.colors.DarkBtnColor};
     border-radius: 6px;
     transition: .2;
 
     &:hover {
-      background: ${Variables.BorderColor};
+      background: ${({ theme }) => theme.colors.BorderColor};
       border-color: rgba(240,246,252,0.4);
     }
   }
@@ -42,7 +41,7 @@ export const Datas = styled.div`
     }
 
     a:hover {
-      color: ${Variables.LinkColor};
+      color: ${({ theme }) => theme.colors.LinkColor};
       text-decoration: underline;
     }
 
@@ -57,15 +56,15 @@ export const Follows = styled.div`
   padding: 1rem 0 1.25rem 0;
 
   a {
-    color: ${Variables.GrayColor};
+    color: ${({ theme }) => theme.colors.GrayColor};
     font-size: .875rem;
   }
 
   a:hover {
-    color: ${Variables.LinkColor};
+    color: ${({ theme }) => theme.colors.LinkColor};
 
     svg, strong {
-      color: ${Variables.LinkColor};
+      color: ${({ theme }) => theme.colors.LinkColor};
     }
   }
 `;

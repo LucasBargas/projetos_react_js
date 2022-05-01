@@ -90,7 +90,7 @@ export const closeSubmenu = styled.li`
     align-items: center;
     justify-content: center;
     background: transparent;
-    color: ${Variables.MainFontColor};
+    color: ${({ theme }) => theme.colors.MainFontColor};
     font-size: 1rem;
   }
 `;

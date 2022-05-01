@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import * as Variables from '../../../styles/Variables';
 
 export const Nav = styled.nav`
   width: 100%;
@@ -26,7 +25,7 @@ export const Nav = styled.nav`
       width: 100%;
       max-width: 270px;
       height: 28px;
-      color: ${Variables.MainFontColor}; 
+      color: ${({ theme }) => theme.colors.MainFontColor}; 
       transition: .2s;
 
       @media (max-width: 768px) {
@@ -36,8 +35,8 @@ export const Nav = styled.nav`
 
       &:focus {
         max-width: 518px;
-        border: 2px solid ${Variables.LinkColor};
-        background: ${Variables.SecondaryBgColor};
+        border: 2px solid ${({ theme }) => theme.colors.LinkColor};
+        background: ${({ theme }) => theme.colors.SecondaryBgColor};
 
         @media (max-width: 768px) {
           max-width: 100%;
@@ -45,14 +44,14 @@ export const Nav = styled.nav`
       }
 
       &::placeholder {
-        color: ${Variables.GrayColor};
+        color: ${({ theme }) => theme.colors.GrayColor};
       }
     }
 
     li {
       &:first-of-type {
         @media (max-width: 768px) {
-          border-top: 1px solid ${Variables.BorderColor};
+          border-top: 1px solid ${({ theme }) => theme.colors.BorderColor};
         }
       }
 
@@ -81,13 +80,13 @@ export const Nav = styled.nav`
         }
 
         &:hover {
-          color: ${Variables.LightColor};
+          color: ${({ theme }) => theme.colors.LightColor};
         }
       }
 
       &:not(:last-of-type) {
         @media (max-width: 768px) {
-          border-bottom: 1px solid ${Variables.BorderColor};
+          border-bottom: 1px solid ${({ theme }) => theme.colors.BorderColor};
         }
       }
 

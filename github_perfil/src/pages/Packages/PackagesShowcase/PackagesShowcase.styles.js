@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import * as Variables from '../../../styles/Variables';
 
 export const PackagesShowcaseArea = styled.div`
   padding-top: 3rem;
@@ -7,7 +6,7 @@ export const PackagesShowcaseArea = styled.div`
   h3 {
     font-size: 1.25rem;
     font-weight: 400;
-    color: ${Variables.GrayColor};
+    color: ${({ theme }) => theme.colors.GrayColor};
   }
 `;
 
@@ -28,7 +27,7 @@ export const PackagesShowcaseContainer = styled.div`
   div {
     padding: 1.5rem;
     text-align: left;
-    border: 1px solid ${Variables.BorderColor};
+    border: 1px solid ${({ theme }) => theme.colors.BorderColor};
     border-radius: 4px;
 
     figure {
@@ -42,7 +41,7 @@ export const PackagesShowcaseContainer = styled.div`
       }
 
       h3 {
-        color: ${Variables.MainFontColor};
+        color: ${({ theme }) => theme.colors.MaindFontColor};
         font-weight: 500;
         margin-left: 5px;
       }
@@ -57,8 +56,8 @@ export const PackagesShowcaseContainer = styled.div`
 
     button {
       font-size: .75rem;
-      background: ${Variables.DarkBtnColor};
-      color: ${Variables.MainFontColor};
+      background: ${({ theme }) => theme.colors.DarkBtnColor};
+      color: ${({ theme }) => theme.colors.MaindFontColor};
       padding: 5px 12px;
       border-radius: 6px;
       font-weight: 500;
@@ -67,7 +66,7 @@ export const PackagesShowcaseContainer = styled.div`
       transition: .2;
 
       &:hover {
-        background: ${Variables.BorderColor};
+        background: ${({ theme }) => theme.colors.BorderColor};
         border-color: rgba(240,246,252,0.4);
       }
     }

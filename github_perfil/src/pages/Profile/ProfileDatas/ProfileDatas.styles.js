@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import * as Variables from '../../../styles/Variables';
 
 export const ProfileDatasArea = styled.div`
   grid-column: 1 / 2;
@@ -48,7 +47,7 @@ export const UserPhoto = styled.div`
     margin-top: 1rem;
     font-size: 1.5rem;
     font-weight: 500;
-    color: ${Variables.MainFontColor};
+    color: ${({ theme }) => theme.colors.MainFontColor};
 
     @media (max-width: 480px) {
       margin-top: 0;
@@ -59,7 +58,7 @@ export const UserPhoto = styled.div`
   h3 {
     font-weight: 300;
     font-size: 1.25rem;
-    color: ${Variables.GrayColor};
+    color: ${({ theme }) => theme.colors.GrayColor};
     line-height: 1.5rem;
   }
 `;

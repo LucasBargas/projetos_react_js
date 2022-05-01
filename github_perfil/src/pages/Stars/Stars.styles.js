@@ -1,11 +1,10 @@
 import styled from 'styled-components';
-import * as Variables from '../../styles/Variables';
 
 export const StarsHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: ${Variables.MainFontColor};
+  color: ${({ theme }) => theme.colors.MainFontColor};
   
   h2 {
     font-size: 1.25rem;
@@ -15,11 +14,11 @@ export const StarsHeader = styled.header`
 
 export const StarsContainer = styled.div`
   margin-top: 1rem;
-  border: 1px solid ${Variables.BorderColor};
+  border: 1px solid ${({ theme }) => theme.colors.BorderColor};
   border-radius: 4px;
   padding: 80px 40px;
   text-align: center;
-  color: ${Variables.MainFontColor};
+  color: ${({ theme }) => theme.colors.MainFontColor};
 
   svg {
     font-size: 1.25rem;
@@ -35,7 +34,7 @@ export const StarsContainer = styled.div`
     line-height: 1.5;
 
     a {
-      color: ${Variables.LinkColor};
+      color: ${({ theme }) => theme.colors.LinkColor};
 
       &:hover {
         text-decoration: underline;
@@ -53,10 +52,10 @@ export const StarLegend = styled.div`
 
   p {
     font-size: .75rem;
-    color: ${Variables.GrayColor};
+    color: ${({ theme }) => theme.colors.GrayColor};
 
     a {
-      color: ${Variables.LinkColor};
+      color: ${({ theme }) => theme.colors.LinkColor};
     }
   }
 `;

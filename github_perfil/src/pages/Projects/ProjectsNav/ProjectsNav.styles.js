@@ -1,13 +1,11 @@
-import styled from "styled-components";
-import { css } from "styled-components";
-import * as Variables from '../../../styles/Variables';
+import styled, { css } from "styled-components";
 
 export const ProjectsNavContainer = styled.nav`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: .5rem;
   align-items: center;
-  color: ${Variables.MainFontColor};
+  color: ${({ theme }) => theme.colors.MainFontColor};
   margin-bottom: 1rem;
 
   @media (max-width: 1024px) {
@@ -32,11 +30,11 @@ export const ProjectsNavContainer = styled.nav`
           ${({ projectsBeta }) => projectsBeta && css`
             background: #1f6feb;
             border-color: #1f6feb;
-            color: ${Variables.LightColor};
+            color: ${({ theme }) => theme.colors.LightColor};
 
             div {
-              color: ${Variables.LightColor};
-              border-color: ${Variables.LightColor};
+              color: ${({ theme }) => theme.colors.LightColor};
+              border-color: ${({ theme }) => theme.colors.LightColor};
             }
           `}
         }
@@ -50,7 +48,7 @@ export const ProjectsNavContainer = styled.nav`
           ${({ projects }) => projects && css`
             background: #1f6feb;
             border-color: #1f6feb;
-            color: ${Variables.LightColor};
+            color: ${({ theme }) => theme.colors.LightColor};
           `}
         }
       }
@@ -59,8 +57,8 @@ export const ProjectsNavContainer = styled.nav`
         display: flex;
         align-items: center;
         gap: .5rem;
-        color: ${Variables.MainFontColor};
-        border: 1px solid ${Variables.BorderColor};
+        color: ${({ theme }) => theme.colors.MainFontColor};
+        border: 1px solid ${({ theme }) => theme.colors.BorderColor};
         padding: 5px 1rem;
         font-size: .875rem;
         font-weight: 500;
@@ -90,7 +88,7 @@ export const InputProjects = styled.div`
     width: 96%;
     height: 33.59px;
     background: #010409;
-    color: ${Variables.GrayColor};
+    color: ${({ theme }) => theme.colors.GrayColor};
     padding: 5px 10px;
     padding-left: 2.25rem;
     font-size: .8125rem;
@@ -101,8 +99,8 @@ export const InputProjects = styled.div`
     }
 
     &:focus {
-      border: 2px solid ${Variables.LinkColor};
-      background: ${Variables.PrimaryBgColor};
+      border: 2px solid ${({ theme }) => theme.colors.LinkColor};
+      background: ${({ theme }) => theme.colors.PrimaryBgColor};
     }
   }
 
@@ -116,7 +114,7 @@ export const InputProjects = styled.div`
     left: 0;
     height: 33.59px;
     background: transparent;
-    color: ${Variables.GrayColor};
+    color: ${({ theme }) => theme.colors.GrayColor};
     font-size: 1.25rem;
   }
 `;
@@ -137,8 +135,8 @@ export const ButtonNewProject = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: ${Variables.GreenColor};
-    color: ${Variables.LightColor};
+    background: ${({ theme }) => theme.colors.GreenColor};
+    color: ${({ theme }) => theme.colors.LightColor};
     font-weight: 500;
     height: 33.59px;
     width: 100%;
@@ -147,7 +145,7 @@ export const ButtonNewProject = styled.div`
     transition: .2s;
 
     &:hover {
-      background: ${Variables.GreenColorHover};
+      background: ${({ theme }) => theme.colors.GreenColorHover};
     }
 
     &::after {
@@ -178,7 +176,7 @@ export const SubmenuList = styled.li`
   cursor: pointer;
 
   &:first-of-type {
-    border-bottom: 1px solid ${Variables.BorderColor};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.BorderColor};
   }
 
   &:hover {
@@ -187,7 +185,7 @@ export const SubmenuList = styled.li`
 
   p {
     margin-top: 2px;
-    color: ${Variables.GrayColor};
+    color: ${({ theme }) => theme.colors.GrayColor};
     line-height: 1.5;
   }
 `;
@@ -200,7 +198,7 @@ export const SubmenuListArea = styled.div`
     top: 0;
     left: 0;
     font-size: 1.25rem;
-    color: ${Variables.GrayColor};
+    color: ${({ theme }) => theme.colors.GrayColor};
   }
 `;
 

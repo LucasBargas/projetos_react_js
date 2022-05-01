@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import * as Variables from '../../../styles/Variables';
 
 export const HeaderIcons = styled.nav`
   display: flex;
@@ -33,17 +32,17 @@ export const HeaderIcons = styled.nav`
 
       &:hover {
         svg {
-          color: ${Variables.LightGray};
+          color: ${({ theme }) => theme.colors.LightGray};
         }
 
         span {
-          border-bottom: 4px solid ${Variables.LightGray};
+          border-bottom: 4px solid ${({ theme }) => theme.colors.LightGray};
         }
       }
 
       svg {
         font-size: 1.25rem;
-        color: ${Variables.LightColor};
+        color: ${({ theme }) => theme.colors.LightColor};
       }
 
       img {
@@ -60,7 +59,7 @@ export const HeaderIcons = styled.nav`
         height: 0;
         border-left: 4px solid transparent;
         border-right: 4px solid transparent;
-        border-bottom: 4px solid ${Variables.LightColor};
+        border-bottom: 4px solid ${({ theme }) => theme.colors.LightColor};
         transform: rotate(180deg);
       }
     }

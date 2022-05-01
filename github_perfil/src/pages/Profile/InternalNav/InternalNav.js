@@ -26,7 +26,8 @@ const InternalNav = ({ userPhotoRef }) => {
           if (window.pageYOffset >= userPhotoHeight.height) setShowUser(true);
           else if (window.pageYOffset < userPhotoHeight.height) setShowUser(false);
         }
-      };
+      }
+      
       if (window.pageYOffset < 96) setInternalNavFixed(false);
     }
 

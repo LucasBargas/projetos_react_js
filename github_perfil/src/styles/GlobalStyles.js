@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import * as Variables from './Variables';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -29,17 +28,17 @@ const GlobalStyle = createGlobalStyle`
       border-right: 2px solid #424242;
     }
 
-    font-family: ${Variables.FontFamily};
-    background: ${Variables.PrimaryBgColor};
-    color: ${Variables.LightColor};
+    font-family: ${({ theme }) => theme.fonts.Roboto};
+    background: ${({ theme }) => theme.colors.PrimaryBgColor};
+    color: ${({ theme }) => theme.colors.LightColor};
 
     @media (max-width: 768px) {
-      background: ${Variables.SecondaryBgColor};
+      background: ${({ theme }) => theme.colors.SecondaryBgColor};
     }
 
     a {
       text-decoration: none;
-      color: ${Variables.LightColor};
+      color: ${({ theme }) => theme.colors.LightColor};
     }
 
     ul {
@@ -52,20 +51,20 @@ const GlobalStyle = createGlobalStyle`
     }
 
     input, textarea {
-      border: 1px solid ${Variables.BorderColor};
-      color: ${Variables.MainFontColor};
+      border: 1px solid ${({ theme }) => theme.colors.BorderColor};
+      color: ${({ theme }) => theme.colors.MainFontColor};
       font-size: .875rem;
       padding: 5px 12px;
       border-radius: 6px;
       box-shadow: 0px 0px transparent;
-      background: ${Variables.PrimaryBgColor};
-      font-family: ${Variables.FontFamily};
+      background: ${({ theme }) => theme.colors.PrimaryBgColor};
+      font-family: ${({ theme }) => theme.fonts.Roboto};
     }
 
     button {
       cursor: pointer;
       border: none;
-      font-family: ${Variables.FontFamily};
+      font-family: ${({ theme }) => theme.fonts.Roboto};
     }
   }
 `;

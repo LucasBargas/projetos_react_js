@@ -1,5 +1,4 @@
 import styled, { keyframes } from 'styled-components';
-import * as Variables from '../../styles/Variables';
 
 const showSubmenu = keyframes`
   from {
@@ -46,7 +45,7 @@ export const ButtonSubmenuContainer = styled.div`
 `;
 
 export const ButtonSubmenu = styled.nav`
-  background: ${Variables.SecondaryBgColor};
+  background: ${({ theme }) => theme.colors.SecondaryBgColor};
   margin-top: 7px;
   box-shadow: 0 8px 24px #010409;
   border: 1px solid rgba(240,246,252,0.1);

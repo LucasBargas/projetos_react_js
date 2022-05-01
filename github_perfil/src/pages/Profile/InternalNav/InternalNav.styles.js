@@ -1,13 +1,12 @@
 import styled, { css } from 'styled-components';
-import * as Variables from '../../../styles/Variables';
 
 export const InternalNavContainer = styled.section`
   grid-column: 1 / 5;
-  border-bottom: 1px solid ${Variables.BorderColor};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.BorderColor};
   display: flex;
   
   @media (max-width: 768px) {
-    background: ${Variables.SecondaryBgColor};
+    background: ${({ theme }) => theme.colors.SecondaryBgColor};
   }
   
   ${({ fixed }) => fixed && css`
@@ -19,7 +18,7 @@ export const InternalNavContainer = styled.section`
   `}
 
   ${({ showUser }) => showUser && css`
-    background: ${Variables.PrimaryBgColor};
+    background:${({ theme }) => theme.colors.PrimaryBgColor};
   `}
 
   @media (max-width: 768px) {
@@ -42,7 +41,7 @@ export const InternalNavContainer = styled.section`
     }
 
     ul {
-      background: ${Variables.PrimaryBgColor};
+      background:${({ theme }) => theme.colors.PrimaryBgColor};
       display: flex;
       grid-column: 2 / 5;
       grid-row: 1 / 2;
@@ -59,7 +58,7 @@ export const InternalNavContainer = styled.section`
       }
       
       @media (max-width: 768px) {
-        background: ${Variables.SecondaryBgColor};
+        background: ${({ theme }) => theme.colors.SecondaryBgColor};
       }
 
       @media (max-width: 480px) {
@@ -71,7 +70,7 @@ export const InternalNavContainer = styled.section`
         align-items: center;
         padding: 1rem;
         border-bottom: 2px solid transparent;
-        color: ${Variables.MainFontColor};
+        color: ${({ theme }) => theme.colors.MainFontColor};
 
         &:hover {
           border-bottom-color: #6e7681;
@@ -82,7 +81,7 @@ export const InternalNavContainer = styled.section`
           top: 2px;
           margin-right: 6px;
           font-size: 1rem;
-          color: ${Variables.MainFontColor};
+          color: ${({ theme }) => theme.colors.MainFontColor};
 
           @media (max-width: 480px) {
             display: none;
@@ -104,7 +103,7 @@ export const InternalNavUser = styled.div`
   display: flex;
   align-items: center;
   font-size: .875rem;
-  color: ${Variables.MainFontColor};
+  color: ${({ theme }) => theme.colors.MainFontColor};
   opacity: 0;
   visibility: hidden;
   transition: .4s;

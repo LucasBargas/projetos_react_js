@@ -1,5 +1,4 @@
 import styled, { keyframes } from 'styled-components';
-import * as Variables from '../../styles/Variables';
 
 const modalAnimation = keyframes`
   from{
@@ -29,7 +28,7 @@ export const ModalArea = styled.div`
   width: 550px;
   height: auto;
   border: 1px solid rgba(240,246,252,0.1);
-  background: ${Variables.DarkBtnColor};
+  background: ${({ theme }) => theme.colors.DarkBtnColor};
   box-shadow: 0 8px 24px #010409;
   border-radius: 10px;
   animation: ${modalAnimation} 0.6s forwards;
@@ -51,7 +50,7 @@ export const ButtonClose = styled.div`
 
     svg {
       font-size: 1.5rem;
-      color: ${Variables.LightColor};
+      color: ${({ theme }) => theme.colors.LightColor};
     }
   }
 `;
@@ -61,18 +60,18 @@ export const ModalContent = styled.div`
   padding: 0 1.25rem 40px 1.25rem;
 
   h2 {
-    color: ${Variables.LightColor};
+    color: ${({ theme }) => theme.colors.LightColor};
     margin-bottom: 20px;
   }
 
   p {
-    color: ${Variables.LightColor};
+    color: ${({ theme }) => theme.colors.LightColor};
     line-height: 1.5;
     word-spacing: 1px;
 
     a {
       font-weight: 700;
-      color: ${Variables.LinkColor};
+      color: ${({ theme }) => theme.colors.LinkColor};
     }
   }
 `;
@@ -80,7 +79,7 @@ export const ModalContent = styled.div`
 export const LinkToGithub = styled.a`
   display: inline-block;
   font-weight: 700;
-  color: ${Variables.LinkColor};
+  color: ${({ theme }) => theme.colors.LinkColor};
   margin: 10px 0 30px 0;
 
   &:hover {
@@ -89,15 +88,15 @@ export const LinkToGithub = styled.a`
 `;
 
 export const ViewButton = styled.button`
-  background: ${Variables.GreenColor};
+  background: ${({ theme }) => theme.colors.GreenColor};
   padding: 8px 16px;
   border-radius: 10px;
   font-size: 1rem;
   font-weight: 700;
-  color: ${Variables.LightColor};
+  color: ${({ theme }) => theme.colors.LightColor};
   transition: .2s;
 
   &:hover {
-    background: ${Variables.GreenColorHover};
+    background: ${({ theme }) => theme.colors.GreenColorHover};
   }
 `;

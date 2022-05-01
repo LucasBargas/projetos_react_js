@@ -1,15 +1,14 @@
 import styled from 'styled-components'
-import * as Variables from '../../styles/Variables';
 
 export const RepoContainer = styled.section`
-  color: ${Variables.MainFontColor};
+  color: ${({ theme }) => theme.colors.MainFontColor};
 `;
 
 export const SearchArea = styled.div`
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  border-bottom: 1px solid ${Variables.DarkBtnColor};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.DarkBtnColor};
   padding-bottom: 1rem;
 
   @media (max-width: 480px) {
@@ -25,7 +24,7 @@ export const SearchArea = styled.div`
     }
 
     &::placeholder {
-      color: ${Variables.MainFontColor};
+      color: ${({ theme }) => theme.colors.MainFontColor};
       font-size: .8125rem;
       opacity: .5;
     }
@@ -50,16 +49,16 @@ export const Button = styled.div`
     font-size: .875rem;
     font-weight: 400;
     padding: 5px 16px;
-    color: ${Variables.MainFontColor};
+    color: ${({ theme }) => theme.colors.MainFontColor};
     box-shadow: 0px 0px transparent, 0px 0px transparent;
     border: 1px solid rgba(240,246,252,0.1);
-    background: ${Variables.DarkBtnColor};
+    background: ${({ theme }) => theme.colors.DarkBtnColor};
     border-radius: 6px;
     display: flex;
     align-items: center;
 
     &:hover, &:focus {
-      background: ${Variables.BorderColor};
+      background: ${({ theme }) => theme.colors.BorderColor};
       border-color: rgba(240,246,252,0.4);
     }
 
@@ -71,7 +70,7 @@ export const Button = styled.div`
       height: 0;
       border-left: 4px solid transparent;
       border-right: 4px solid transparent;
-      border-bottom: 4px solid ${Variables.MainFontColor};
+      border-bottom: 4px solid ${({ theme }) => theme.colors.MainFontColor};
       transform: rotate(180deg);
       cursor: pointer;
       position: relative;
@@ -83,7 +82,7 @@ export const Button = styled.div`
     li {
       padding: 10px 7px 10px 2.25rem;
       cursor: pointer;
-      color: ${Variables.MainFontColor};
+      color: ${({ theme }) => theme.colors.MainFontColor};
       display: flex;
       align-items: center;
 
@@ -92,7 +91,7 @@ export const Button = styled.div`
       }
 
       &:not(:last-of-type) {
-        border-bottom: 1px solid ${Variables.DarkBtnColor};
+        border-bottom: 1px solid ${({ theme }) => theme.colors.DarkBtnColor};
       }
 
       &:hover {
@@ -124,14 +123,14 @@ export const ButtonNewRepo = styled.div`
     font-size: .875rem;
     font-weight: 500;
     line-height: 20px;
-    color: ${Variables.LightColor};
-    background: ${Variables.GreenColor};
+    color: ${({ theme }) => theme.colors.LightColor};
+    background: ${({ theme }) => theme.colors.GreenColor};
     border: 1px solid rgba(240,246,252,0.1);
     border-radius: 6px;
     transition: .2s;
 
     &:hover {
-      background: ${Variables.GreenColorHover};
+      background: ${({ theme }) => theme.colors.GreenColorHover};
     }
 
     @media (max-width: 480px) {
@@ -150,11 +149,11 @@ export const CloseButtonSubmenu = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px 7px 10px 16px;
-  border-bottom: 1px solid ${Variables.DarkBtnColor};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.DarkBtnColor};
 
   button {
     background: transparent;
-    color: ${Variables.GrayColor};
+    color: ${({ theme }) => theme.colors.GrayColor};
     font-size: 1rem;
     border: none;
     padding: .25rem 0 0 .25rem;
@@ -168,7 +167,7 @@ export const CloseButtonSubmenu = styled.div`
     }
 
     &:hover {
-      color: ${Variables.MainFontColor};
+      color: ${({ theme }) => theme.colors.MainFontColor};
     }
   }
 `;

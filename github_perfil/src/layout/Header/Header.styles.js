@@ -1,10 +1,9 @@
 import styled from 'styled-components';
-import * as Variables from '../../styles/Variables';
 
 export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
-  background: ${Variables.SecondaryBgColor};
+  background: ${({ theme }) => theme.colors.SecondaryBgColor};
   padding: 1rem 2rem;
   font-size: .875rem;
   position: relative;
@@ -42,7 +41,7 @@ export const HeaderBtnOpen = styled.button`
 
   svg {
     display: inline-block;
-    color: ${Variables.LightColor};
+    color: ${({ theme }) => theme.colors.LightColor};
     font-size: 1.5rem;
   }
 `;

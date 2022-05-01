@@ -1,11 +1,10 @@
 import styled from "styled-components";
-import * as Variables from '../../styles/Variables';
 
 export const FooterArea = styled.div`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  border-top: 1px solid ${Variables.BorderColor};
+  border-top: 1px solid ${({ theme }) => theme.colors.BorderColor};
   font-size: .75rem;
   padding: 40px 0;
   margin-top: 20px;
@@ -37,7 +36,7 @@ export const GithubCopy = styled.div`
   span {
     display: inline-block;
     margin-left: .75rem;
-    color: ${Variables.GrayColor};
+    color: ${({ theme }) => theme.colors.GrayColor};
   }
 `;
 
@@ -58,7 +57,7 @@ export const FooterNav = styled.nav`
     }
 
     a {
-      color: ${Variables.LinkColor};
+      color: ${({ theme }) => theme.colors.LinkColor};
 
       &:hover {
         text-decoration: underline;

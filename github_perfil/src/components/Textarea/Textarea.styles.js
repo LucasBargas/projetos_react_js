@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import * as Variables from '../../styles/Variables';
 
 const DefaultTextarea = styled.textarea`
   display: block;
@@ -7,8 +6,8 @@ const DefaultTextarea = styled.textarea`
   width: 100%;
 
   &:focus {
-    border-color: ${Variables.BorderFocus};
-    box-shadow: 0px 0px 6px 0px ${Variables.BorderFocus};
+    border-color: ${({ theme }) => theme.colors.BorderFocus};
+    box-shadow: 0px 0px 6px 0px ${({ theme }) => theme.colors.BorderFocus};
   }
 `;
 

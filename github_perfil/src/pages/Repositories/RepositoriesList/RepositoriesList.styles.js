@@ -1,15 +1,14 @@
 import styled from 'styled-components';
-import * as Variables from '../../../styles/Variables';
 
 export const RepoListArea = styled.div`
   ul {
     li {
-      border-top: 1px solid ${Variables.DarkBtnColor};
-      border-bottom: 1px solid ${Variables.DarkBtnColor};
+      border-top: 1px solid ${({ theme }) => theme.colors.DarkBtnColor};
+      border-bottom: 1px solid ${({ theme }) => theme.colors.DarkBtnColor};
       padding: 1.5rem 0;
 
       p {
-        color: ${Variables.GrayColor};
+        color: ${({ theme }) => theme.colors.GrayColor};
         font-size: .8125rem;
         margin: .5rem 0 1rem 0;
         width: 55%;
@@ -47,10 +46,10 @@ export const ClearFilterBtn = styled.div`
   align-items: center;
 
   &:hover {
-    color: ${Variables.LinkColor};
+    color: ${({ theme }) => theme.colors.LinkColor};
 
     button {
-      background: ${Variables.LinkColor};
+      background: ${({ theme }) => theme.colors.LinkColor};
     }
   }
 
@@ -62,7 +61,7 @@ export const ClearFilterBtn = styled.div`
     height: 18px;
     border-radius: 6px;
     background: #6e7681;
-    color: ${Variables.LightColor};
+    color: ${({ theme }) => theme.colors.LightColor};
     margin-right: .5rem;
 
     svg {
@@ -76,7 +75,7 @@ export const RepoTitle = styled.div`
   align-items: center;
 
   a {
-    color: ${Variables.LinkColor};
+    color: ${({ theme }) => theme.colors.LinkColor};
     font-size: 1.25rem;
     font-weight: 500;
 
@@ -94,9 +93,9 @@ export const RepoTitle = styled.div`
     font-size: .75rem;
     font-weight: 500;
     line-height: 18px;
-    border: 1px solid ${Variables.BorderColor};
+    border: 1px solid ${({ theme }) => theme.colors.BorderColor};
     border-radius: 2rem;
-    color: ${Variables.GrayColor};
+    color: ${({ theme }) => theme.colors.GrayColor};
     padding: 0 7px;
     margin-left: .5rem;
   }
@@ -113,7 +112,7 @@ export const TagLang = styled.div`
   display: flex;
   align-items: center;
   font-size: .75rem;
-  color: ${Variables.GrayColor};
+  color: ${({ theme }) => theme.colors.GrayColor};
 
   span {
     display: inline-block;

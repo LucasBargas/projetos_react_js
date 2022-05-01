@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import * as Variables from "../../../styles/Variables";
 
 export const PinnedContainer = styled.section`
   padding-top: 2rem;
@@ -7,7 +6,7 @@ export const PinnedContainer = styled.section`
   h2 {
     font-size: 1rem;
     font-weight: 400;
-    color: ${Variables.MainFontColor};
+    color: ${({ theme }) => theme.colors.MainFontColor};
   }
 `;
 
@@ -25,10 +24,10 @@ export const PinnedRepos = styled.div`
 export const PinnedRepoCard = styled.div`
   border-radius: 6px;
   padding: 1rem;
-  border: 1px solid ${Variables.BorderColor};
+  border: 1px solid ${({ theme }) => theme.colors.BorderColor};
 
   p {
-    color: ${Variables.GrayColor};
+    color: ${({ theme }) => theme.colors.GrayColor};
     font-size: .75rem;
     margin: .5rem 0 .25rem 0;
   }
@@ -41,11 +40,11 @@ export const RepoTitle = styled.div`
   gap: .5rem;
 
   svg {
-    color: ${Variables.GrayColor};
+    color: ${({ theme }) => theme.colors.GrayColor};
   }
 
   a {
-    color: ${Variables.LinkColor};
+    color: ${({ theme }) => theme.colors.LinkColor};
 
     &:hover {
       text-decoration: underline;
@@ -54,8 +53,8 @@ export const RepoTitle = styled.div`
 
   span {
     padding: .12rem .5rem;
-    color: ${Variables.GrayColor};
-    border: 1px solid ${Variables.BorderColor};
+    color: ${({ theme }) => theme.colors.GrayColor};
+    border: 1px solid ${({ theme }) => theme.colors.BorderColor};
     border-radius: 2rem;
     font-size: .75rem;
   }
